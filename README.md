@@ -13,11 +13,11 @@
 
 ## Figma
 
-[UCR Enviro Website Figma Design File](https://www.figma.com/design/nUe3PqmZOCx8VdVzvXQkkl/Fall--25-Enviro)
+[Environmental Science Club Website Figma Design File](https://www.figma.com/design/nUe3PqmZOCx8VdVzvXQkkl/Fall--25-Enviro)
 
 ## Node.js
 
-UCR Enviro Website runs on Node.js Version 20.10.0 and higher. Please ensure you have Node.js installed via the [official website](https://nodejs.org/en).
+Environmental Science Club Website runs on Node.js Version 20.10.0 and higher. Please ensure you have Node.js installed via the [official website](https://nodejs.org/en).
 
 ## Next.js
 
