@@ -1,1 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Single+Day&family=Bagel+Fat+One&family=Open+Sans&display=swap");
 @import "tailwindcss";
+
+@theme {
+  --color-enviro-green-100: #c4d2bf;
+  --color-enviro-green-200: #8e9d1d;
+  --color-enviro-green-300: #586b4f;
+  --color-enviro-green-400: #232e27;
+  --color-enviro-gray-100: #e2e6e4;
+  --color-enviro-blue-100: #8cb4c5;
+  --color-enviro-red-100: #b3373a;
+  --color-enviro-brown-100: #897768;
+
+  --font-enviro-single-day: "Single Day", cursive;
+  --font-enviro-bagel-fat-one: "Bagel Fat One", cursive;
+  --font-enviro-open-sans: "Open Sans", sans-serif;
+}
+
+body {
+  font-family: var(--font-enviro-open-sans);
+}
