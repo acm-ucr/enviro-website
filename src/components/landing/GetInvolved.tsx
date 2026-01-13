@@ -1,7 +1,5 @@
 const GetInvolved = () => {
-  return (
-    <div></div>
-  );
-}
+  return <div></div>;
+};
 
 export default GetInvolved;

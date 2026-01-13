@@ -1,7 +1,5 @@
 const What = () => {
-    return (
-        <div></div>
-    );
-}
+  return <div></div>;
+};
 
 export default What;

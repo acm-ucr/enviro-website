@@ -1,7 +1,5 @@
 const PastEvents = () => {
-    return (
-        <div></div>
-    );
-}
+  return <div></div>;
+};
 
 export default PastEvents;
