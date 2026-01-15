@@ -1,9 +1,7 @@
+import Example from "@/components/example/Example";
+
 const Home = () => {
-  return (
-    <div className="flex h-screen w-screen items-center justify-center">
-      Hello World
-    </div>
-  );
+  return <Example />;
 };
 
 export default Home;
