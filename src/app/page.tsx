@@ -1,7 +1,11 @@
+import Button from "@/components/Button"
+
 const Home = () => {
   return (
     <div className="flex h-screen w-screen items-center justify-center">
-      Hello World
+      
+      <div>Hello</div>
+      <Button>Learn More</Button>
     </div>
   );
 };
