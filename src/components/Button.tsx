@@ -8,7 +8,7 @@ interface TitleProp {
 
 const Button = ({ children }: TitleProp) => {
   return (
-    <div className="bg-enviro-green-100 w-1/10 px-2 py-2">
+    <div className="bg-enviro-green-100 w-48 px-2 py-2">
       <div className="relative">
         <Image src={Border} alt="" className="h-auto w-full rounded-xs" />
         <div className="absolute inset-0 flex items-center justify-center">
