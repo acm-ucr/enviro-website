@@ -7,6 +7,8 @@ const Home = () => {
     <div className="flex h-screen w-screen items-center justify-center">
       <div>Hello</div>
       <Button>Learn More</Button>
+      <div>Hello</div>
+      <Button>Learn More</Button>
     </div>
   );
 };
