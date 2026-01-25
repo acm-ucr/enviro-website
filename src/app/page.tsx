@@ -1,11 +1,8 @@
-import Button from "@/components/Button";
 import EventCard from "@/components/EventsCard";
 
 const Home = () => {
   return (
     <div className="flex h-screen w-screen items-center justify-center">
-      <div>Hello</div>
-      <Button>Learn More</Button>
       <EventCard
         eventName="Event Name"
         location="Location"
