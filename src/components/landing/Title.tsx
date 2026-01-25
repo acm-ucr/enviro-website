@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import Border from "@/public/SquigglyBorder.svg";
 import Logo from "@/public/logo.webp";
 import NotebookBackground from "@/public/line-paper.webp";
 
@@ -16,7 +16,7 @@ const Title = () => {
             <h1
               className="
                 font-enviro-single-day
-                text-enviro-green-300
+                text-enviro-green-400
                 whitespace-nowrap
                 text-4xl md:text-6xl
                 mt-[clamp(-10rem,5vw,2rem)]
@@ -25,25 +25,30 @@ const Title = () => {
               Environmental Science Club
             </h1>
 
-            <p className="font-enviro-open-sans font-semibold text-2xl md:text-4xl tracking-normal text-enviro-green-200 leading-tight mt-6 md:mt-10 max-w-md">
+            <p className="font-enviro-open-sans font-semibold text-1xl md:text-2xl tracking-normal text-enviro-green-300 leading-loose mb-5 mt-6 md:mt-10 max-w-md">
               Informing, empowering, and
               mobilizing students to lead
               sustainability efforts at UC Riverside.
             </p>
 
             <div className="mt-2 md:mt-10">
-              <button className="bg-enviro-green-300 hover:bg-enviro-green-400 text-white font-bold py-2 px-4 rounded">
-                Contact Us
-              </button>
+                  <div className="bg-enviro-green-100 w-1/2 px-2 py-2">
+                <div className="relative">
+                  <Image src={Border} alt="" className="h-auto w-full rounded-xs" />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <p className="text-enviro-green-300">Contact Us</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
           {/* RIGHT */}
-          <div className="flex justify-end translate-x-0 md:translate-x-5 translate-y-[-2.5rem] md:translate-y-0 w-full">
+          <div className="flex md:justify-end translate-x-20 md:translate-x-5 translate-y-[-2.5rem] md:translate-y-0 w-full">
             <Image
               src={Logo}
               alt="Environmental Science Club @ UCR Logo"
-              className="w-full h-auto drop-shadow-md"
+              className="w-3/5 md:w-full h-auto drop-shadow-md"
             />
           </div>
         </div>
