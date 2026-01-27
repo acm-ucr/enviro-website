@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import RSVP_Button from "@/public/Home/RSVP Button.webp";
+import RSVP_Button from "@/public/RSVP Button.webp";
 
 interface EventCardProp {
   eventName: string;
