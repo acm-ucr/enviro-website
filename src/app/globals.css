@@ -2,14 +2,14 @@
 @import "tailwindcss";
 
 @theme {
-  --color-enviro-green-100: #c4d2bf;
-  --color-enviro-green-200: #8e9d1d;
-  --color-enviro-green-300: #586b4f;
-  --color-enviro-green-400: #232e27;
+  --color-enviro-green-50: #c4d2be;
+  --color-enviro-green-100: #8c9c09;
+  --color-enviro-green-200: #576b4e;
+  --color-enviro-green-300: #232e27;
   --color-enviro-gray-100: #e2e6e4;
-  --color-enviro-blue-100: #8cb4c5;
-  --color-enviro-red-100: #b3373a;
-  --color-enviro-brown-100: #897768;
+  --color-enviro-blue-100: #8db4c6;
+  --color-enviro-red-100: #b33539;
+  --color-enviro-brown-100: #897767;
 
   --font-enviro-single-day: "Single Day", cursive;
   --font-enviro-bagel-fat-one: "Bagel Fat One", cursive;
