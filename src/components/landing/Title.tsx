@@ -23,7 +23,10 @@ const Title = () => {
             </p>
 
             <div className="mt-2 md:mt-10">
-              <div className="bg-enviro-green-100 w-1/2 px-2 py-2">
+              <button
+                type="button"
+                className="bg-enviro-green-100 w-1/2 px-2 py-2"
+              >
                 <div className="relative">
                   <Image
                     src={Border}
@@ -34,7 +37,7 @@ const Title = () => {
                     <p className="text-enviro-green-300">Contact Us</p>
                   </div>
                 </div>
-              </div>
+              </button>
             </div>
           </div>
 
