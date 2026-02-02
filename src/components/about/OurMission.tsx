@@ -16,7 +16,7 @@ const OurMission = () => {
             <Image
               src={MissionStatement}
               alt=""
-              className="relative top-1 border-enviro-green-400 h-9/10 scale-[0.93] border object-cover"
+              className="border-enviro-green-400 relative top-1 h-9/10 scale-[0.93] border object-cover"
             />
           </div>
           {/* Tape */}
@@ -37,8 +37,8 @@ const OurMission = () => {
           <div className="font-enviro-single-day text-6xl">
             Our Mission Statement
           </div>
-          <Image src={Line} alt="Squiggly Line" className="w-full pb-5"/>
-          <div className="text-3xl pb-10">
+          <Image src={Line} alt="Squiggly Line" className="w-full pb-5" />
+          <div className="pb-10 text-3xl">
             We are the Environmental Science Club, a vibrant community of
             students committed to understanding and protecting the environment.
             Our mission is to raise global awareness about ecological issues and
