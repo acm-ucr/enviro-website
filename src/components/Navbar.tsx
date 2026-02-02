@@ -15,7 +15,7 @@ const Navbar = () => {
       <Image
         className="overflow-hidden object-cover object-top"
         src={navbarBg}
-        alt="navbar background"
+        alt="NavBar Background"
         fill
       />
 
