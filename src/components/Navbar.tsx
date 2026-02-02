@@ -11,7 +11,7 @@ const Navbar = () => {
   const pathName = usePathname();
 
   return (
-    <div className="font-enviro-single-day relative h-40 w-full text-black">
+    <div className="font-enviro-single-day relative h-45 w-full text-black">
       <Image
         className="overflow-hidden object-cover object-top"
         src={navbarBg}
@@ -21,10 +21,10 @@ const Navbar = () => {
 
       <div className="absolute inset-0 z-10 flex px-6">
         <Image
-          className="-ml-5 shrink-0 scale-85"
+          className="-ml-5 shrink-0 scale-90"
           src={enviroLogo}
-          alt="Enviromental Science Club Logo"
-          width={170}
+          alt="Environmental Science Club Logo"
+          width={180}
         />
 
         <div className="ml-auto flex items-center justify-end gap-15 text-4xl">
