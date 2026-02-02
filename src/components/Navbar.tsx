@@ -27,7 +27,7 @@ const Navbar = () => {
           width={170}
         />
 
-        <div className="ml-auto flex items-center justify-end gap-20 text-4xl">
+        <div className="ml-auto flex items-center justify-end gap-15 text-4xl">
           {navigations.map(({ link, name }, index) => (
             <div key={index}>
               <Link
