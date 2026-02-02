@@ -5,11 +5,11 @@ export interface navigation {
 const navigations: navigation[] = [
   {
     name: "Home",
-    link: "/home",
+    link: "/",
   },
   {
     name: "About",
-    link: "/link",
+    link: "/about",
   },
   {
     name: "Board",
