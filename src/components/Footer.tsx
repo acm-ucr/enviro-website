@@ -15,8 +15,8 @@ const Footer = () => {
         <div className="mt-5 flex flex-col justify-center gap-y-2">
           <div>
             <div className="bg-enviro-gray-100 outline-enviro-green-300 inline-block p-2 shadow-md shadow-gray-500 outline-1">
-              <div className="bg-enviro-green-300 px-8">
-                <p className="font-enviro-bagel-fat-one text-7xl [text-shadow:_1px_1px_0_#000,_-1px_1px_0_#000,_1px_-1px_0_#000,_-1px_-1px_0_#000]">
+              <div className="bg-enviro-green-200 px-8">
+                <p className="font-enviro-bagel-fat-one pb-2 text-7xl [text-shadow:_1px_1px_0_#000,_-1px_1px_0_#000,_1px_-1px_0_#000,_-1px_-1px_0_#000]">
                   ENSC
                 </p>
               </div>
