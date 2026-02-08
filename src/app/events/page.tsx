@@ -1,7 +1,9 @@
+import UpcomingEvents from "@/components/UpcomingEvents";
+
 const Events = () => {
   return (
-    <div className="flex h-screen w-screen items-center justify-center">
-      Events
+    <div className="">
+      <UpcomingEvents />
     </div>
   );
 };
