@@ -1,9 +1,7 @@
+import Title from "@/components/landing/Title";
+
 const Home = () => {
-  return (
-    <div className="flex h-screen w-screen items-center justify-center">
-      Home
-    </div>
-  );
+  return <Title />;
 };
 
 export default Home;
