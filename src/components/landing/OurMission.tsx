@@ -4,10 +4,16 @@ import MissionStatement from "@/public/Home/MissionStatement.webp";
 import Tape from "@/public/tape.webp";
 import Flower from "@/public/Flower.webp";
 import Line from "@/public/Home/SquigglyLine.svg";
+import Gradient from "@/public/Gradient.webp";
 
 const OurMission = () => {
   return (
-    <div className="h-full w-full bg-[url(/Home/Gradient.webp)]">
+    <div className="relative h-screen w-full">
+      <Image
+        src={Gradient}
+        alt="Gradient background"
+        className="absolute -z-1 w-full"
+      />
       {/* Content */}
       <div className="z-10 flex h-full items-center justify-around">
         {/* Left side */}
