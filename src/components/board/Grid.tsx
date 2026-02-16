@@ -16,7 +16,12 @@ interface GridProps {
   circleSize?: string;
 }
 
-const Grid = ({ images, cols, itemHeight = "h-56", circleSize="w-[55%]"}: GridProps) => {
+const Grid = ({
+  images,
+  cols,
+  itemHeight = "h-56",
+  circleSize = "w-[55%]",
+}: GridProps) => {
   const colClass = cols === 2 ? "grid-cols-2" : "grid-cols-3";
   return (
     <div className={`grid ${colClass} justify-items-center gap-x-90 gap-y-20`}>
@@ -41,22 +46,22 @@ const Grid = ({ images, cols, itemHeight = "h-56", circleSize="w-[55%]"}: GridPr
                     fill
                   />
                 </div>
-                  <Image
+                <Image
                   src={circle}
                   alt=""
                   fill
-                  className="object-contain scale-[1.01]"
+                  className="scale-[1.01] object-contain"
                 />
               </div>
             </div>
           </div>
-                  <div className="mt-6 h-24 flex flex-col items-center justify-start">
-          <p className="font-enviro-single-day text-enviro-green-200 text-4xl font-normal leading-none whitespace-nowrap">
-            {img.title}
-          </p>
-          <p className="text-2xl text-enviro-green-200 font-open-sans mt-2 font-normal leading-none whitespace-nowrap">
-            {img.name}
-          </p>
+          <div className="mt-6 flex h-24 flex-col items-center justify-start">
+            <p className="font-enviro-single-day text-enviro-green-200 text-4xl leading-none font-normal whitespace-nowrap">
+              {img.title}
+            </p>
+            <p className="text-enviro-green-200 font-open-sans mt-2 text-2xl leading-none font-normal whitespace-nowrap">
+              {img.name}
+            </p>
           </div>
         </div>
       ))}
