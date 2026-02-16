@@ -1,8 +1,9 @@
+import Board1 from "@/components/board/Board";
 const Board = () => {
   return (
-    <div className="flex h-screen w-screen items-center justify-center">
-      Board
-    </div>
+    <>
+      <Board1 />
+    </>
   );
 };
 
