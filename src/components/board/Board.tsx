@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Grid from "./Grid";
 import boardInfo from "@/data/BoardInfo";
-import paper from "@/public/RippedPaper.webp";
+import paper from "@/public/webpPaper.webp";
 
 const Board = () => {
   const firstRow = boardInfo.slice(0, 2);
