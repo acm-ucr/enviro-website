@@ -11,7 +11,7 @@ const Navbar = () => {
   const pathName = usePathname();
 
   return (
-    <div className="font-enviro-single-day relative h-45 w-full text-black">
+    <div className="font-enviro-single-day absolute top-0 left-0 z-50 h-45 w-full text-black">
       <Image
         className="overflow-hidden object-cover object-top"
         src={navbarBg}
