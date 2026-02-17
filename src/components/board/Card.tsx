@@ -1,6 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 import photoFrame from "@/public/Board/BoardBG.webp";
-import circle from "@/public/Board/Ellipse.png";
+import circle from "@/public/Board/Ellipse.webp";
 
 export interface GalleryImage {
   image: StaticImageData;
