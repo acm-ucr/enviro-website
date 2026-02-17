@@ -44,7 +44,7 @@ const Events = () => {
             <Image
               src={Flower}
               alt=""
-              className="absolute bottom-15 right-0 w-1/8 -translate-x-3"
+              className="absolute right-0 bottom-15 w-1/8 -translate-x-3"
             />
           </div>
 
