@@ -1,9 +1,23 @@
 import Image from "next/image";
 import Leaf from "@/public/Leaf.webp";
+import Squiggle from "@/public/Home/WhiteSquigglyLine.webp";
 
 const About = () => {
   return (
     <div className="flex w-screen flex-col items-center">
+      <div className="bg-enviro-green-200 relative flex w-full flex-col items-center justify-center gap-4 p-8 text-white">
+        <div className="font-enviro-single-day text-4xl">
+          Our Mission Statement
+        </div>
+        <div className="font-enviro-open-sans flex max-w-3xl text-center text-lg">
+          We are the Environmental Science Club, a vibrant community of students
+          committed to understanding and protecting the environment. Our mission
+          is to raise global awareness about ecological issues and inspire
+          action through education, advocacy, and hands-on involvement.
+        </div>
+        <Image src={Squiggle} alt="" className="absolute h-5/6" />
+      </div>
+
       {/* First question */}
       <div className="bg-enviro-blue-100 font-enviro-single-day border-enviro-green-200 mt-12 flex w-4/12 items-center justify-center rounded-4xl border py-4 text-3xl">
         What Do We Do?
