@@ -9,14 +9,12 @@ const Board = () => {
   return (
     <div className="text-enviro-green-200 relative flex min-h-screen w-full flex-col items-center pt-50">
       <Image
-        className="z-10 object-cover object-top"
+        className="object-cover object-top"
         src={BoardBG}
         alt="Board background"
         fill
       />
-      <div className="font-enviro-single-day z-10 pt-10 text-9xl font-normal">
-        Board
-      </div>
+      <div className="font-enviro-single-day z-10 pt-10 text-9xl">Board</div>
       <div className="z-10 mt-16 mb-50 w-full px-10">
         <Grid
           images={firstRow}
