@@ -20,7 +20,7 @@ const Events = () => {
         />
         <div className="flex flex-row items-center justify-center gap-4">
           <div className="relative w-1/4">
-            <div className="bg-enviro-green-50 rounded-3xl pt-2 pb-8">
+            <div className="bg-enviro-green-50 rounded-3xl pt-8 pb-8">
               <div className="bg-enviro-gray-100 mx-5 pb-10 shadow-lg">
                 <Image
                   src={eventPic1}
@@ -33,7 +33,7 @@ const Events = () => {
             <Image
               src={Tape}
               alt=""
-              className="absolute -top-5 left-1/2 w-80 -translate-x-1/2 opacity-70"
+              className="absolute top-5 left-1/2 w-1/2 -translate-x-1/2 opacity-80"
             />
             {/*Flower*/}
             <Image
@@ -41,10 +41,15 @@ const Events = () => {
               alt=""
               className="absolute -top-0 left-0 w-1/4 -translate-x-0"
             />
+            <Image
+              src={Flower}
+              alt=""
+              className="absolute bottom-15 right-0 w-1/8 -translate-x-3"
+            />
           </div>
 
           <div className="relative w-1/4">
-            <div className="bg-enviro-green-50 rounded-3xl pt-2 pb-8">
+            <div className="bg-enviro-green-50 rounded-3xl pt-8 pb-8">
               <div className="bg-enviro-gray-100 mx-5 pb-10 shadow-lg">
                 <Image
                   src={eventPic2}
@@ -57,13 +62,18 @@ const Events = () => {
             <Image
               src={Tape}
               alt=""
-              className="absolute -top-5 left-1/2 w-80 -translate-x-1/2 opacity-70"
+              className="absolute top-5 left-1/2 w-1/2 -translate-x-1/2 opacity-80"
             />
             {/*Flower*/}
             <Image
               src={Flower}
               alt=""
               className="absolute -top-0 right-0 w-1/4"
+            />
+            <Image
+              src={Flower}
+              alt=""
+              className="absolute bottom-15 left-0 w-1/8 translate-x-3"
             />
           </div>
         </div>
