@@ -1,6 +1,5 @@
 import Image, { StaticImageData } from "next/image";
 import photoFrame from "@/public/Board/BoardBG.webp";
-import circle from "@/public/Board/Ellipse.png";
 
 export interface GalleryImage {
   image: StaticImageData;
@@ -27,13 +26,12 @@ const BoardCard = ({ img, itemHeight, circleSize }: BoardCardProps) => (
         <div className={`relative aspect-square ${circleSize}`}>
           <div className="absolute inset-0 overflow-hidden rounded-full">
             <Image
-              className="object-cover object-center"
+              className="border-enviro-green-200 rounded-full border-4 object-cover object-center"
               src={img.image}
               alt={`Picture of ${img.name}`}
               fill
             />
           </div>
-          <Image src={circle} alt="border" fill className="object-contain" />
         </div>
       </div>
     </div>
