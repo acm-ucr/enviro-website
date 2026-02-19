@@ -9,7 +9,7 @@ import Flower from "@/public/Home/FlowerBG.webp";
 
 const Events = () => {
   return (
-    <div className="flex h-screen w-screen flex-col items-center justify-center">
+    <div className="flex min-h-screen w-screen flex-col items-center justify-center">
       <UpcomingEvents />
 
       <div className="bg-enviro-green-200 flex w-screen flex-col items-center justify-center gap-8 p-8">
@@ -21,12 +21,21 @@ const Events = () => {
         <div className="flex flex-row items-center justify-center gap-4">
           <div className="relative w-1/4">
             <div className="bg-enviro-green-50 rounded-3xl pt-8 pb-8">
-              <div className="bg-enviro-gray-100 mx-5 pb-10 shadow-lg">
-                <Image
-                  src={eventPic1}
-                  alt="Group Picture"
-                  className="border-enviro-green-400 relative top-2 scale-[0.93] border object-cover"
-                />
+              <div className="bg-enviro-gray-100 mx-5 flex flex-col pb-4 shadow-lg">
+                <div className="relative h-64 w-full overflow-hidden">
+                  <Image
+                    src={eventPic1}
+                    alt="Group Picture"
+                    fill
+                    className="border-enviro-green-400 border object-cover p-2"
+                  />
+                </div>
+                <div className="font-enviro-single-day text-center text-xl">
+                  Event Name
+                </div>
+                <div className="font-enviro-single-day text-center text-sm">
+                  Month Year
+                </div>
               </div>
             </div>
             {/* Tape */}
@@ -39,23 +48,29 @@ const Events = () => {
             <Image
               src={Flower}
               alt=""
-              className="absolute -top-0 left-0 w-1/4 -translate-x-0"
+              className="absolute top-3 left-0 w-1/5 translate-x-2"
             />
             <Image
               src={Flower}
               alt=""
-              className="absolute right-0 bottom-15 w-1/8 -translate-x-3"
+              className="absolute right-0 bottom-19 w-1/8 -translate-x-4"
             />
           </div>
 
           <div className="relative w-1/4">
             <div className="bg-enviro-green-50 rounded-3xl pt-8 pb-8">
-              <div className="bg-enviro-gray-100 mx-5 pb-10 shadow-lg">
+              <div className="bg-enviro-gray-100 mx-5 pb-4 shadow-lg">
                 <Image
                   src={eventPic2}
                   alt="Group Picture"
-                  className="border-enviro-green-400 relative top-2 scale-[0.93] border object-cover"
+                  className="border-enviro-green-400 relative border object-cover p-2"
                 />
+                <div className="font-enviro-single-day text-center text-xl">
+                  Event Name
+                </div>
+                <div className="font-enviro-single-day text-center text-sm">
+                  Month Year
+                </div>
               </div>
             </div>
             {/* Tape */}
@@ -68,12 +83,12 @@ const Events = () => {
             <Image
               src={Flower}
               alt=""
-              className="absolute -top-0 right-0 w-1/4"
+              className="absolute top-2 right-2 w-1/5"
             />
             <Image
               src={Flower}
               alt=""
-              className="absolute bottom-15 left-0 w-1/8 translate-x-3"
+              className="absolute bottom-22 left-0 w-1/8 translate-x-3"
             />
           </div>
         </div>
