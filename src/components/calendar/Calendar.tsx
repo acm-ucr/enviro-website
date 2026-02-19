@@ -92,7 +92,7 @@ const Calendar = () => {
         mode="single"
         selected={date}
         onSelect={setDate}
-        className="mt-20 mx-auto w-11/12"
+        className="mt-20 mx-auto w-11/12 font-enviro-open-sans bg-enviro-gray-100"
         events={data?.allEvents ?? []}
       />
     </div>
