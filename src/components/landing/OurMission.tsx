@@ -2,21 +2,20 @@ import Button from "@/components/Button";
 import Image from "next/image";
 import MissionStatement from "@/public/Home/MissionStatement.webp";
 import Tape from "@/public/tape.webp";
-import Flower from "@/public/Flower.webp";
 import Line from "@/public/Home/SquigglyLine.svg";
 
 const OurMission = () => {
   return (
-    <div className="h-full w-full bg-[url(/Home/Gradient.webp)]">
+    <div className="bg-[url(/Home/Gradient.webp)] py-12 pt-12 pb-50">
       {/* Content */}
-      <div className="z-10 flex h-full items-center justify-around">
+      <div className="z-10 flex items-center justify-around">
         {/* Left side */}
-        <div className="relative h-8/12 w-5/12">
-          <div className="bg-enviro-gray-100 h-full w-full shadow-lg">
+        <div className="relative w-1/2">
+          <div className="bg-enviro-gray-100 mx-5 pb-10 shadow-lg">
             <Image
               src={MissionStatement}
-              alt=""
-              className="border-enviro-green-400 relative top-1 h-9/10 scale-[0.93] border object-cover"
+              alt="Group Picture"
+              className="border-enviro-green-400 relative top-2 scale-[0.93] border object-cover"
             />
           </div>
           {/* Tape */}
@@ -24,12 +23,6 @@ const OurMission = () => {
             src={Tape}
             alt=""
             className="absolute -top-5 left-1/2 w-80 -translate-x-1/2 opacity-70"
-          />
-          {/* Flower */}
-          <Image
-            src={Flower}
-            alt=""
-            className="absolute -bottom-70 left-0.5 -translate-x-1/2 scale-[0.8]"
           />
         </div>
         {/* Right side */}
