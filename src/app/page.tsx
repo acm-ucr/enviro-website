@@ -25,7 +25,7 @@ const Home = () => {
       <div className="z-10">
         <UpcomingEvents />
       </div>
-      <div className="w-full">
+      <div className="z-10">
         <GetInvolved />
       </div>
     </div>
