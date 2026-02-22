@@ -27,7 +27,7 @@ const Title = () => {
             </div>
 
             <div className="mt-2 md:mt-10">
-              <Button children={"Contact Us"} />
+              <Button width="w-1/2" text="text-3xl" children={"Contact Us"} />
             </div>
           </div>
 

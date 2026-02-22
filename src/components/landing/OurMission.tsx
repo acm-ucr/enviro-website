@@ -38,7 +38,9 @@ const OurMission = () => {
             inspire action through education, advocacy, and hands-on
             involvement.
           </div>
-          <Button>Learn More</Button>
+          <Button width="w-1/2" text="text-3xl">
+            Learn More
+          </Button>
         </div>
       </div>
     </div>
