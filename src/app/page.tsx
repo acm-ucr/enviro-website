@@ -1,5 +1,6 @@
 import UpcomingEvents from "@/components/UpcomingEvents";
-import OurMission from "@/components/about/OurMission";
+import GetInvolved from "@/components/GetInvolved";
+import OurMission from "@/components/landing/OurMission";
 import Jagged from "@/public/Jagged.webp";
 import Image from "next/image";
 import Flower from "@/public/Flower.webp";
@@ -23,6 +24,9 @@ const Home = () => {
       />
       <div className="z-10">
         <UpcomingEvents />
+      </div>
+      <div className="z-10">
+        <GetInvolved />
       </div>
     </div>
   );
