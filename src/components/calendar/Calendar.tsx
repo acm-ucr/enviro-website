@@ -4,6 +4,7 @@ import Earth from "@/public/Earth.webp";
 import React from "react";
 import { useState, useEffect } from "react";
 import { Calendar as UICalendar } from "@/components/calendar/uicalendar";
+import UpcomingEvents from "@/components/UpcomingEvents";
 import { useQuery } from "@tanstack/react-query";
 
 export function useWindowWidth() {
@@ -93,6 +94,7 @@ const Calendar = () => {
         className="w-full"
         events={data?.allEvents ?? []}
       />
+      <UpcomingEvents />
     </div>
   );
 };
