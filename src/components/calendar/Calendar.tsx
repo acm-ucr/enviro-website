@@ -79,20 +79,20 @@ const Calendar = () => {
   });
 
   return (
-    <div className="relative flex min-h-screen min-w-screen flex-col items-center">
-      <div>
+    <div className="relative flex max-w-screen flex-col items-center">
+      <div className="mb-15">
         <Image
           src={Earth}
           alt="Earth"
-          className="absolute -top-1/2 -z-10 w-2/5 justify-self-center opacity-15"
+          className="absolute -top-1/3 -z-10 w-2/5 justify-self-center opacity-15"
         />
       </div>
-      <div className="font-enviro-single-day mt-70 text-6xl">Events</div>
+      <div className="font-enviro-single-day mt-25 py-20 text-7xl">Events</div>
       <UICalendar
         mode="single"
         selected={date}
         onSelect={setDate}
-        className="mt-20 mx-auto w-11/12 font-enviro-open-sans bg-enviro-gray-100"
+        className="w-full"
         events={data?.allEvents ?? []}
       />
     </div>

@@ -1,25 +1,17 @@
 "use client";
 
 import * as React from "react";
-import { RiArrowLeftFill, RiArrowRightFill } from "react-icons/ri";
 import { DayPicker } from "react-day-picker";
 import { useState } from "react";
-import { GoogleEventProps } from "../calendar/Calendar";
+import { GoogleEventProps } from "@/components/calendar/Calendar";
+import { CalendarTop } from "@/components/calendar/CalendarParts";
 import "react-day-picker/dist/style.css";
-//import CalendarDay from "@/components/calendar/month/calendarday";
-//import CalendarTop from "@/components/calendar/month/calendartop";
-//import UpcomingEvents from "../calendar/upcomingevents/upcomingevents";
 
 export type CalendarProps = React.ComponentProps<typeof DayPicker> & {
   events: GoogleEventProps[];
 };
 
-function Calendar({
-  className,
-  classNames,
-  showOutsideDays = false,
-  ...props
-}: CalendarProps) {
+function Calendar({ className, classNames }: CalendarProps) {
   const [currentDate, setCurrentDate] = useState(new Date());
   const today = new Date();
 
@@ -46,70 +38,61 @@ function Calendar({
     );
     setCurrentDate(newDate);
   };
+  const [selectedDay, setSelectedDay] = useState<Date | undefined>(new Date());
 
   return (
-    <div className="flex flex-col">
-      {/* <CalendarTop
+    <div className="mb-10 h-full w-2/3">
+      <CalendarTop
         currentDate={currentDate}
         onPrevMonth={prevMonth}
         onNextMonth={nextMonth}
-      /> */}
-      <DayPicker
-  month={currentDate}
-  showOutsideDays={showOutsideDays}
-  onMonthChange={setCurrentDate}
-  formatters={{
-    formatWeekdayName: (date) => {
-      const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-      return days[date.getDay()];
-    },
-    formatCaption: () => "",
-  }}
-  className={`${className} pb-8`}
-  classNames={{
-    months: "",
-    month: "",
-    caption: "",
-    caption_label: "",
-    nav: "space-x-8",
-    nav_button: "",
-    nav_button_previous: "hidden",
-    nav_button_next: "hidden",
-    table: "w-full space-y-1",
-    head_row:
-      "border border-enviro-blue-100 flex mt-20 w-full rounded-t-xl text-center items-center justify-center grid grid-cols-7",
-    head_cell:
-      "text-white bg-enviro-blue-100 text-5xl",
-    row: "grid grid-cols-7",
-    cell:
-      "bg-enviro-green-50 border border-enviro-blue-100 h-[15vh] md:h-[20vh]",
-    day: "",
-    day_range_end: "",
-    day_selected: "",
-    day_outside: "",
-    day_disabled: "",
-    day_range_middle: "",
-    day_hidden: "",
-    ...classNames,
-  }}
-  components={{
-    Chevron: ({ orientation }) =>
-      orientation === "left" ? (
-        <button type="button" onClick={prevMonth}>
-          <RiArrowLeftFill />
-        </button>
-      ) : (
-        <button type="button" onClick={nextMonth}>
-          <RiArrowRightFill />
-        </button>
-      ),
-  }}
-  {...props}
-/>
+      />
+      <div className="bg-enviro-blue-100 h-full rounded-3xl px-6 pb-5">
+        <DayPicker
+          month={currentDate}
+          mode="single"
+          selected={selectedDay}
+          onSelect={setSelectedDay}
+          showOutsideDays={true}
+          onMonthChange={setCurrentDate}
+          disableNavigation
+          formatters={{
+            formatWeekdayName: (date) => {
+              const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+              return days[date.getDay()];
+            },
+            formatCaption: () => "",
+          }}
+          className={`${className ?? ""}`}
+          classNames={{
+            months: "",
+            month: "flex flex-col w-full h-full",
+            today: "",
 
+            month_grid: "h-full",
+
+            weekdays:
+              "grid grid-cols-7 bg-enviro-green-200 text-white text-4xl font-enviro-open-sans",
+
+            week: "grid grid-cols-7",
+
+            nav: "hidden",
+
+            day: "border border-width-2 border-enviro-green-100 bg-enviro-gray-100 h-35 flex justify-end font-enviro-open-sans text-4xl",
+            range_end: "",
+            selected: "opacity-60",
+            outside: "text-gray-500",
+            disabled: "",
+            range_middle: "",
+
+            ...classNames,
+          }}
+        />
+      </div>
     </div>
   );
 }
+
 Calendar.displayName = "Calendar";
 
 export { Calendar };
