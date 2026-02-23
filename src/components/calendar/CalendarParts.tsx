@@ -19,7 +19,7 @@ export function CalendarTop({
         <Image src={LeftArrow} alt="Prev month" className="w-10" />
       </button>
 
-      <div className="font-enviro-open-sans text-4xl">
+      <div className="font-enviro-open-sans text-4xl uppercase">
         {currentDate.toLocaleString("default", {
           month: "long",
           year: "numeric",

@@ -79,15 +79,13 @@ const Calendar = () => {
   });
 
   return (
-    <div className="relative flex max-w-screen flex-col items-center">
-      <div className="mb-15">
-        <Image
-          src={Earth}
-          alt="Earth"
-          className="absolute -top-1/3 -z-10 w-2/5 justify-self-center opacity-15"
-        />
-      </div>
-      <div className="font-enviro-single-day mt-25 py-20 text-7xl">Events</div>
+    <div className="flex max-w-screen flex-col items-center bg-[url(/GrayBG.webp)]">
+      <Image
+        src={Earth}
+        alt="Earth"
+        className="-mt-50 w-1/2 justify-self-center opacity-15"
+      />
+      <div className="font-enviro-single-day mt-5 py-20 text-7xl">Events</div>
       <UICalendar
         mode="single"
         selected={date}
