@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Title from "@/components/about/Title";
 import What from "@/components/about/What";
 import OurMission from "@/components/about/OurMission";
 import GreenBottom from "@/public/About/GreenBottom.webp";
@@ -6,7 +7,8 @@ import GrayBG from "@/public/About/WhatGrayBG.webp";
 
 const About = () => {
   return (
-    <div className="relative mt-40 flex h-full w-full flex-col items-center">
+    <div className="relative flex h-full w-full flex-col items-center">
+      <Title />
       <Image
         src={GrayBG}
         alt="Gray Background"
