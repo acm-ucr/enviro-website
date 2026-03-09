@@ -24,7 +24,7 @@ const Navbar = () => {
             <Image
               src={navbarOpen}
               alt="Navbar background open"
-              className="object-cover w-screen"
+              className="w-screen object-cover"
             />
           </div>
         ) : (
@@ -32,7 +32,7 @@ const Navbar = () => {
             <Image
               src={navbarClose}
               alt="Navbar background closed"
-              className="object-cover w-screen"
+              className="w-screen object-cover"
             />
           </div>
         )}
