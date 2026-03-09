@@ -16,10 +16,10 @@ export function CalendarTop({
   return (
     <div className="mb-6 flex items-center justify-center space-x-5">
       <button type="button" onClick={onPrevMonth}>
-        <Image src={LeftArrow} alt="Prev month" className="w-10" />
+        <Image src={LeftArrow} alt="Prev month" className="w-5 md:w-10" />
       </button>
 
-      <div className="font-enviro-open-sans text-4xl uppercase">
+      <div className="font-enviro-open-sans text-xl md:text-4xl uppercase">
         {currentDate.toLocaleString("default", {
           month: "long",
           year: "numeric",
@@ -27,7 +27,7 @@ export function CalendarTop({
       </div>
 
       <button type="button" onClick={onNextMonth}>
-        <Image src={RightArrow} alt="Next month" className="w-10" />
+        <Image src={RightArrow} alt="Next month" className="w-5 md:w-10" />
       </button>
     </div>
   );

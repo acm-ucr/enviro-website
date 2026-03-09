@@ -84,9 +84,9 @@ const Calendar = () => {
       <Image
         src={Earth}
         alt="Earth"
-        className="-mt-50 w-1/2 justify-self-center opacity-15"
+        className="md:-mt-50 w-1/2 justify-self-center opacity-15"
       />
-      <div className="font-enviro-single-day mt-5 py-20 text-7xl">Events</div>
+      <div className="font-enviro-single-day md:mt-5 py-5 md:py-20 text-4xl md:text-7xl">Events</div>
       <UICalendar
         mode="single"
         selected={date}

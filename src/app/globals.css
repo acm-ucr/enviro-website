@@ -18,4 +18,5 @@
 
 body {
   font-family: var(--font-enviro-open-sans);
+  background-image: url('@/public/GrayBG.webp');
 }

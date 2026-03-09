@@ -47,7 +47,7 @@ function Calendar({ className, classNames }: CalendarProps) {
         onPrevMonth={prevMonth}
         onNextMonth={nextMonth}
       />
-      <div className="bg-enviro-blue-100 h-full rounded-3xl px-6 pb-5">
+      <div className="bg-enviro-blue-100 h-full rounded-3xl px-3 md:px-6 pb-5">
         <DayPicker
           month={currentDate}
           mode="single"
@@ -72,15 +72,15 @@ function Calendar({ className, classNames }: CalendarProps) {
             month_grid: "h-full",
 
             weekdays:
-              "grid grid-cols-7 bg-enviro-green-200 text-white text-4xl font-enviro-open-sans",
+              "grid grid-cols-7 bg-enviro-green-200 text-white text-xl md:text-4xl font-enviro-open-sans",
 
             week: "grid grid-cols-7",
 
             nav: "hidden",
 
-            day: "border border-width-2 border-enviro-green-100 bg-enviro-gray-100 h-35 flex justify-end font-enviro-open-sans text-4xl",
+            day: "border border-width-2 border-enviro-green-100 bg-enviro-gray-100 h-15 md:h-35 flex justify-end font-enviro-open-sans text-xl md:text-4xl",
             range_end: "",
-            selected: "opacity-60",
+            selected: "opacity-100 bg-green-100",
             outside: "text-gray-500",
             disabled: "",
             range_middle: "",
