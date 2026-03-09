@@ -4,14 +4,98 @@ import Link from "next/link";
 import Image from "next/image";
 import enviroLogo from "@/public/logo.webp";
 import navbarBg from "@/public/Navbar.webp";
+import navbarClose from "@/public/navbarMobile.webp";
+import navbarOpen from "@/public/navbarMobileOpen.webp";
+import navbarLine from "@/public/navbarLine.webp";
 import navigations from "@/data/NavBarLinks";
+import {useState} from "react";
+
 import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const pathName = usePathname();
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="font-enviro-single-day absolute top-0 left-0 z-50 h-45 w-full text-black">
+    <div className="font-enviro-single-day fixed top-0 left-0 z-50 w-screen text-black">
+<div className="relative w-full md:hidden">
+{isOpen ? (
+  <div className="relative w-full h-[300px]">
+    <Image
+      src={navbarOpen}
+      alt="Navbar background open"
+      fill
+      sizes="100vw"
+      className="object-cover"
+    />
+  </div>
+) : (
+  <div className="relative w-full h-[71px]">
+    <Image
+      src={navbarClose}
+      alt="Navbar background closed"
+      fill
+      sizes="100vw"
+      className="object-cover"
+    />
+  </div>
+)}
+
+  <div className="absolute inset-0 z-10">
+    <Link href="/" className="absolute left-4 items-center">
+      <Image
+        src={enviroLogo}
+        alt="Environmental Science Club Logo"
+        width={70}
+        height={70}
+        className="shrink-0"
+      />
+    </Link>
+
+    <button
+      type="button"
+      onClick={() => setIsOpen(!isOpen)}
+      className="absolute right-4 top-4 flex flex-col gap-2 p-2"
+    >
+      <span className="block h-0.5 w-7 bg-black"></span>
+      <span className="block h-0.5 w-7 bg-black"></span>
+      <span className="block h-0.5 w-7 bg-black"></span>
+    </button>
+
+    {isOpen && (
+      <div className="pt-20">
+        <div className="flex justify-center px-3">
+          <Image
+            src={navbarLine}
+            alt=""
+            className="w-96 h-[1.5px]"
+          />
+        </div>
+
+        <div className="mt-3 flex flex-col items-center gap-2 text-2xl">
+          {navigations.map(({ link, name }, index) => (
+            <Link
+              key={index}
+              href={link}
+              onClick={() => setIsOpen(false)}
+              className={[
+                "text-center transition rounded-full",
+                pathName === link
+                  ? "bg-enviro-green-100 px-3 text-white"
+                  : "text-black",
+              ].join(" ")}
+            >
+              {name}
+            </Link>
+          ))}
+        </div>
+      </div>
+    )}
+  </div>
+</div>
+
+      
+      <div className = "relative hidden h-45 w-full md:block">
       <Image
         className="overflow-hidden object-cover object-top"
         src={navbarBg}
@@ -44,6 +128,7 @@ const Navbar = () => {
             </div>
           ))}
         </div>
+      </div>
       </div>
     </div>
   );
