@@ -17,26 +17,22 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="font-enviro-single-day fixed top-0 left-0 z-50 w-screen text-black">
-      <div className="relative w-full md:hidden">
+    <div className="font-enviro-single-day fixed top-0 z-50 w-screen text-black">
+      <div className="relative w-screen md:hidden">
         {isOpen ? (
-          <div className="relative h-[300px] w-full">
+          <div className="relative w-screen">
             <Image
               src={navbarOpen}
               alt="Navbar background open"
-              fill
-              sizes="100vw"
-              className="object-cover"
+              className="object-cover w-screen"
             />
           </div>
         ) : (
-          <div className="relative h-[71px] w-full">
+          <div className="relative w-screen">
             <Image
               src={navbarClose}
               alt="Navbar background closed"
-              fill
-              sizes="100vw"
-              className="object-cover"
+              className="object-cover w-screen"
             />
           </div>
         )}
