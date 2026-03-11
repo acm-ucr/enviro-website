@@ -5,10 +5,11 @@ import eventPic1 from "@/public/Events/Event1.webp";
 import eventPic2 from "@/public/Events/Event2.webp";
 import Image from "next/image";
 import Flower from "@/public/Home/FlowerBG.webp";
+import GreenMiddle from "@/public/Events/GreenMiddle.webp";
 
 const PastEvents = () => {
   return (
-    <div className="flex flex-col items-center justify-center gap-16 bg-[url(/Events/GreenBG.webp)] pt-16 pb-10">
+    <div className="relative flex flex-col items-center justify-center gap-16 bg-[url(/Events/GreenBG.webp)] pt-16 pb-10">
       <Subheading
         title="Past Events Highlights"
         bg="bg-enviro-green-100"
@@ -89,6 +90,11 @@ const PastEvents = () => {
       <Button width="w-1/5" text="text-3xl">
         See More
       </Button>
+      <Image
+        src={GreenMiddle}
+        alt="Green Middle Rip"
+        className="absolute -top-20 z-10 w-full"
+      />
     </div>
   );
 };

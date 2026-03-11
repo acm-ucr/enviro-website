@@ -4,7 +4,7 @@ import Button from "@/components/Button";
 
 const UpcomingEvent = () => {
   return (
-    <div className="text-enviro-gray-100 flex flex-col items-center justify-center gap-y-12 bg-[url(/GrayBG.webp)] pb-16">
+    <div className="text-enviro-gray-100 flex flex-col items-center justify-center gap-y-12 pb-16">
       <Subheading title="Upcoming Events" bg="bg-enviro-green-100" text="" />
       <div className="flex flex-col items-center gap-y-10">
         <EventCard
