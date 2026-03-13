@@ -8,7 +8,7 @@ import SquigglyLine2 from "@/public/Home/SquigglyLine2.webp";
 const Interested = () => {
   return (
     <div className="bg-[url(/GrayBG.webp)]">
-      <div className="relative flex bg-[url(/RippedPaperBlue.webp)] py-80">
+      <div className="relative flex bg-[url(/webpPaperBlue.webp)] py-80">
         <div className="text-enviro-green-300 ml-16 flex w-1/3 flex-col gap-y-10">
           <div className="flex flex-col items-center">
             <p className="font-enviro-single-day text-5xl">
