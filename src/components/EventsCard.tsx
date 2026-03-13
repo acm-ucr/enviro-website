@@ -22,7 +22,7 @@ const EventCard = ({
   link,
 }: EventCardProp) => {
   return (
-    <div className="font-enviro-open-sans text-enviro-green-300 lg:7/12 flex w-7/12 rounded-tl-2xl rounded-bl-2xl shadow-md shadow-gray-500 sm:w-11/12 md:w-7/12">
+    <div className="font-enviro-open-sans text-enviro-green-300 lg:7/12 flex w-7/12 rounded-tl-2xl rounded-bl-2xl shadow-md shadow-gray-500 sm:w-11/12 md:w-10/12">
       <div className="bg-enviro-blue-100 flex w-4/6 rounded-tl-2xl rounded-bl-2xl p-5 sm:p-3 md:p-4 lg:p-5">
         <div className="bg-enviro-gray-100 border-enviro-green-300 flex w-full flex-col justify-center rounded-xl border-1 text-center text-4xl sm:text-2xl md:text-3xl lg:text-4xl">
           <p>{month}</p>
