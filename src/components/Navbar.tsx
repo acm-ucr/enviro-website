@@ -9,7 +9,6 @@ import navbarOpen from "@/public/navbarMobileOpen.webp";
 import navbarLine from "@/public/navbarLine.webp";
 import navigations from "@/data/NavBarLinks";
 import { useState } from "react";
-
 import { usePathname } from "next/navigation";
 
 const Navbar = () => {
@@ -17,25 +16,14 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="font-enviro-single-day fixed top-0 z-50 w-screen text-black">
-      <div className="relative w-screen md:hidden">
-        {isOpen ? (
-          <div className="relative w-screen">
+    <div className="font-enviro-single-day fixed top-0 left-0 right-0 z-50 w-full text-black">
+      <div className="relative w-full overflow-hidden md:hidden">
             <Image
-              src={navbarOpen}
+              src={isOpen ? navbarOpen : navbarClose}
               alt="Navbar background open"
-              className="w-screen object-cover"
+              className={["block w-full h-auto origin-top transform-gpu", isOpen ? "scale-x-[1.04] scale-y-[1.02]" : "scale-x-[1.10] scale-y-[1.03]",].join (" ")}
+                priority
             />
-          </div>
-        ) : (
-          <div className="relative w-screen">
-            <Image
-              src={navbarClose}
-              alt="Navbar background closed"
-              className="w-screen object-cover"
-            />
-          </div>
-        )}
 
         <div className="absolute inset-0 z-10">
           <Link href="/" className="absolute left-4 items-center">
@@ -61,10 +49,14 @@ const Navbar = () => {
           {isOpen && (
             <div className="pt-20">
               <div className="flex justify-center px-3">
-                <Image src={navbarLine} alt="" className="h-[1.5px] w-96" />
+                <Image
+                  src={navbarLine}
+                  alt=""
+                  className="h-[1.5px] w-[90%] max-w-sm"
+                />
               </div>
 
-              <div className="mt-3 flex flex-col items-center gap-2 text-2xl">
+              <div className="mt-3 flex flex-col items-center gap-4 text-2xl">
                 {navigations.map(({ link, name }, index) => (
                   <Link
                     key={index}
