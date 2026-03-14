@@ -16,14 +16,19 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="font-enviro-single-day fixed top-0 left-0 right-0 z-50 w-full text-black">
+    <div className="font-enviro-single-day fixed top-0 right-0 left-0 z-50 w-full text-black">
       <div className="relative w-full overflow-hidden md:hidden">
-            <Image
-              src={isOpen ? navbarOpen : navbarClose}
-              alt="Navbar background open"
-              className={["block w-full h-auto origin-top transform-gpu", isOpen ? "scale-x-[1.04] scale-y-[1.02]" : "scale-x-[1.10] scale-y-[1.03]",].join (" ")}
-                priority
-            />
+        <Image
+          src={isOpen ? navbarOpen : navbarClose}
+          alt="Navbar background open"
+          className={[
+            "block h-auto w-full origin-top transform-gpu",
+            isOpen
+              ? "scale-x-[1.04] scale-y-[1.02]"
+              : "scale-x-[1.10] scale-y-[1.03]",
+          ].join(" ")}
+          priority
+        />
 
         <div className="absolute inset-0 z-10">
           <Link href="/" className="absolute left-4 items-center">
