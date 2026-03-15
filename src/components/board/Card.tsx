@@ -39,7 +39,7 @@ const BoardCard = ({ img, itemHeight, circleSize }: BoardCardProps) => (
       <div className="font-enviro-single-day text-enviro-green-200 text-2xl leading-tight font-normal md:text-4xl md:leading-none md:whitespace-nowrap">
         {img.title}
       </div>
-      <div className="text-enviro-green-200 font-open-sans mt-1 text-sm leading-tight md:mt-2 md:text-2xl md:leading-none font-normal md:whitespace-nowrap">
+      <div className="text-enviro-green-200 font-open-sans mt-1 text-sm leading-tight font-normal md:mt-2 md:text-2xl md:leading-none md:whitespace-nowrap">
         {img.name}
       </div>
     </div>

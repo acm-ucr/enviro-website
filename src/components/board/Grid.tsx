@@ -19,7 +19,8 @@ const Grid = ({
       className={`grid ${colClass} -mb-6 justify-items-center gap-x-3 gap-y-8 md:-mb-20 md:gap-x-5 md:gap-y-10`}
     >
       {images.map((img, i) => {
-        const isLastOddItem = images.length % 2 === 1 && i === images.length - 1;
+        const isLastOddItem =
+          images.length % 2 === 1 && i === images.length - 1;
 
         return (
           <div

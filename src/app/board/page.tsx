@@ -15,7 +15,9 @@ const Board = () => {
         fill
       />
       <div className="relative z-10 flex min-h-screen w-full flex-col items-center pt-28 md:pt-50">
-      <div className="font-enviro-single-day z-10 pt-18 text-6xl md:pt-10 md:text-9xl">Board</div>
+        <div className="font-enviro-single-day z-10 pt-18 text-6xl md:pt-10 md:text-9xl">
+          Board
+        </div>
 
         <div className="mt-10 mb-20 w-full px-4 md:hidden">
           <Grid
@@ -25,7 +27,7 @@ const Board = () => {
             circleSize="w-8/12"
           />
         </div>
-<div className="hidden w-full px-10 md:block md:mt-16 md:mb-50">
+        <div className="hidden w-full px-10 md:mt-16 md:mb-50 md:block">
           <Grid
             images={firstRow}
             cols={2}
