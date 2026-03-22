@@ -1,8 +1,14 @@
+"use client";
 import BoardCard, { GalleryImage } from "@/components/board/Card";
-
+import { motion } from "motion/react";
 interface GridProps {
   images: GalleryImage[];
 }
+
+const GridMotion = {
+  hidden: { opacity: 0, x: -100 },
+  visible: { opacity: 1, x: 0 },
+};
 
 const Grid = ({ images }: GridProps) => {
   const colClass =
@@ -17,8 +23,13 @@ const Grid = ({ images }: GridProps) => {
           images.length % 2 === 1 && i === images.length - 1;
 
         return (
-          <div
+          <motion.div
             key={i}
+            variants={GridMotion}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: i * 0.1 }}
             className={[
               "w-full max-w-[150px] sm:max-w-[250px] md:max-w-none",
               isLastOddItem
@@ -27,7 +38,7 @@ const Grid = ({ images }: GridProps) => {
             ].join(" ")}
           >
             <BoardCard img={img} />
-          </div>
+          </motion.div>
         );
       })}
     </div>
