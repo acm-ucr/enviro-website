@@ -15,31 +15,18 @@ const Board = () => {
         fill
       />
       <div className="relative z-10 flex min-h-screen w-full flex-col items-center pt-28 md:pt-50">
-        <div className="font-enviro-single-day z-10 pt-18 text-6xl md:pt-10 md:text-9xl">
+        <div className="font-enviro-single-day z-10 pt-18 text-6xl sm:text-7xl md:pt-10 md:text-8xl xl:text-9xl">
           Board
         </div>
 
-        <div className="mt-10 mb-20 w-full px-4 md:hidden">
-          <Grid
-            images={boardInfo}
-            cols={2}
-            itemHeight="h-8/12"
-            circleSize="w-8/12"
-          />
+        <div className="mt-10 mb-20 w-full md:hidden md:px-10">
+          <Grid images={boardInfo} />
         </div>
         <div className="hidden w-full px-10 md:mt-16 md:mb-50 md:block">
-          <Grid
-            images={firstRow}
-            cols={2}
-            itemHeight="h-7/12"
-            circleSize="w-7/12"
-          />
-          <Grid
-            images={rest}
-            cols={3}
-            itemHeight="h-9/12"
-            circleSize="w-7/12"
-          />
+          <div className="flex flex-col gap-y-28">
+            <Grid images={firstRow} />
+            <Grid images={rest} />
+          </div>
         </div>
       </div>
     </div>

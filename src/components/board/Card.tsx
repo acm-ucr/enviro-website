@@ -9,13 +9,11 @@ export interface GalleryImage {
 
 interface BoardCardProps {
   img: GalleryImage;
-  itemHeight: string;
-  circleSize: string;
 }
 
-const BoardCard = ({ img, itemHeight, circleSize }: BoardCardProps) => (
+const BoardCard = ({ img }: BoardCardProps) => (
   <div className="w-full text-center">
-    <div className={`relative mx-auto aspect-square ${itemHeight}`}>
+    <div className="relative aspect-square">
       <Image
         className="object-contain"
         src={photoFrame}
@@ -23,7 +21,7 @@ const BoardCard = ({ img, itemHeight, circleSize }: BoardCardProps) => (
         alt="Photo frame"
       />
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className={`relative aspect-square ${circleSize}`}>
+        <div className="relative aspect-square w-3/5">
           <div className="absolute inset-0 overflow-hidden rounded-full">
             <Image
               className="border-enviro-green-200 rounded-full border-2 object-cover object-center md:border-4"
@@ -35,11 +33,11 @@ const BoardCard = ({ img, itemHeight, circleSize }: BoardCardProps) => (
         </div>
       </div>
     </div>
-    <div className="mt-3 flex min-h-[4.5rem] flex-col items-center justify-start md:mt-6 md:h-24">
-      <div className="font-enviro-single-day text-enviro-green-200 text-2xl leading-tight font-normal md:text-4xl md:leading-none md:whitespace-nowrap">
+    <div className="mt-3 flex flex-col items-center justify-start leading-tight md:mt-6 md:h-24">
+      <div className="font-enviro-single-day text-enviro-green-200 text-2xl sm:text-3xl md:text-4xl lg:text-4xl lg:leading-none xl:text-5xl">
         {img.title}
       </div>
-      <div className="text-enviro-green-200 font-open-sans mt-1 text-sm leading-tight font-normal md:mt-2 md:text-2xl md:leading-none md:whitespace-nowrap">
+      <div className="text-enviro-green-200 font-open-sans text-sm sm:text-xl md:mt-2 md:leading-none md:whitespace-nowrap lg:text-2xl xl:text-3xl">
         {img.name}
       </div>
     </div>
