@@ -26,8 +26,8 @@ const Title = () => {
               sustainability efforts at UC Riverside.
             </div>
 
-            <div className="mt-2 md:mt-10">
-              <Button width="w-1/2" text="text-3xl" children={"Contact Us"} />
+            <div className="mt-2 w-1/2 md:mt-10">
+              <Button href="" children={"Contact Us"} />
             </div>
           </div>
 
