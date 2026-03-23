@@ -30,7 +30,11 @@ const OurMission = () => {
           <div className="font-enviro-single-day text-6xl">
             Our Mission Statement
           </div>
-          <Image src={Line} alt="Squiggly Line" className="w-full pb-5" />
+          <Image
+            src={Line}
+            alt="Squiggly Line"
+            className="pointer-events-none w-full pb-5"
+          />
           <div className="pb-10 text-3xl">
             We are the Environmental Science Club, a vibrant community of
             students committed to understanding and protecting the environment.
@@ -38,7 +42,11 @@ const OurMission = () => {
             inspire action through education, advocacy, and hands-on
             involvement.
           </div>
-          <Button>Learn More</Button>
+          <div className="w-1/2">
+            <Button href="" textSize="text-3xl">
+              Learn More
+            </Button>
+          </div>
         </div>
       </div>
     </div>
