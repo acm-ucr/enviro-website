@@ -10,6 +10,7 @@ import navbarLine from "@/public/navbarLine.webp";
 import navigations from "@/data/NavBarLinks";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
+import { motion } from "motion/react";
 
 const Navbar = () => {
   const pathName = usePathname();
@@ -24,27 +25,25 @@ const Navbar = () => {
           className={[
             "block h-auto w-full origin-top transform-gpu",
             isOpen
-              ? "scale-x-[1.04] scale-y-[1.02]"
-              : "scale-x-[1.10] scale-y-[1.03]",
+              ? "scale-x-[1.04] scale-y-[1.01] sm:scale-y-[0.76]"
+              : "scale-x-[1.10] scale-y-[1.02] sm:scale-y-[0.72]",
           ].join(" ")}
           priority
         />
 
         <div className="absolute inset-0 z-10">
-          <Link href="/" className="absolute left-4 items-center">
+          <Link href="/" className="absolute top-1 left-4 items-center">
             <Image
               src={enviroLogo}
               alt="Environmental Science Club Logo"
-              width={70}
-              height={70}
-              className="shrink-0"
+              className="h-2/12 w-2/12 shrink-0"
             />
           </Link>
 
           <button
             type="button"
             onClick={() => setIsOpen(!isOpen)}
-            className="absolute top-4 right-4 flex flex-col gap-2 p-2"
+            className="absolute top-4 right-4 flex flex-col gap-2 p-2 hover:cursor-pointer sm:top-7"
           >
             <span className="block h-0.5 w-7 bg-black"></span>
             <span className="block h-0.5 w-7 bg-black"></span>
@@ -52,30 +51,28 @@ const Navbar = () => {
           </button>
 
           {isOpen && (
-            <div className="pt-20">
-              <div className="flex justify-center px-3">
-                <Image
-                  src={navbarLine}
-                  alt=""
-                  className="h-[1.5px] w-[90%] max-w-sm"
-                />
+            <div className="pt-16 sm:pt-20">
+              <div className="flex justify-center px-3 sm:pt-2">
+                <Image src={navbarLine} alt="" className="h-[1.5px] w-full" />
               </div>
 
-              <div className="mt-3 flex flex-col items-center gap-4 text-2xl">
+              <div className="mt-3 flex flex-col items-center gap-2 text-2xl sm:gap-4 sm:text-3xl">
                 {navigations.map(({ link, name }, index) => (
-                  <Link
-                    key={index}
-                    href={link}
-                    onClick={() => setIsOpen(false)}
-                    className={[
-                      "rounded-full text-center transition",
-                      pathName === link
-                        ? "bg-enviro-green-100 px-3 text-white"
-                        : "text-black",
-                    ].join(" ")}
-                  >
-                    {name}
-                  </Link>
+                  <motion.div initial={{ scale: 1 }} whileTap={{ scale: 0.9 }}>
+                    <Link
+                      key={index}
+                      href={link}
+                      onClick={() => setIsOpen(false)}
+                      className={[
+                        "rounded-full text-center transition",
+                        pathName === link
+                          ? "bg-enviro-green-100 px-3 text-white"
+                          : "text-black",
+                      ].join(" ")}
+                    >
+                      {name}
+                    </Link>
+                  </motion.div>
                 ))}
               </div>
             </div>
@@ -91,17 +88,23 @@ const Navbar = () => {
           fill
         />
 
-        <div className="absolute inset-0 z-10 flex px-6">
-          <Image
-            className="-ml-5 shrink-0 scale-90"
-            src={enviroLogo}
-            alt="Environmental Science Club Logo"
-            width={180}
-          />
+        <div className="absolute inset-0 -top-5 z-10 flex lg:-top-7 lg:px-6">
+          <Link href="/">
+            <Image
+              className="mt-5 -ml-5 shrink-0 scale-80 hover:cursor-pointer lg:scale-90 xl:-ml-3 xl:scale-100"
+              src={enviroLogo}
+              alt="Environmental Science Club Logo"
+              width={180}
+            />
+          </Link>
 
-          <div className="ml-auto flex items-center justify-end gap-15 text-4xl">
+          <div className="mr-7 -mb-2 ml-auto flex items-center justify-end gap-6 text-3xl hover:cursor-pointer lg:gap-10 lg:text-4xl 2xl:text-5xl">
             {navigations.map(({ link, name }, index) => (
-              <div key={index}>
+              <motion.div
+                key={index}
+                initial={{ scale: 1 }}
+                whileTap={{ scale: 0.9 }}
+              >
                 <Link
                   href={link}
                   className={[
@@ -113,7 +116,7 @@ const Navbar = () => {
                 >
                   {name}
                 </Link>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
