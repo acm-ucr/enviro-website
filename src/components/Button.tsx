@@ -1,29 +1,37 @@
+"use client";
 import Image from "next/image";
 import Border from "@/public/SquigglyBorder.svg";
 import { ReactNode } from "react";
+import Link from "next/link";
+import { motion } from "motion/react";
 
 interface ButtonProps {
   children: ReactNode;
-  width?: string;
-  text?: string;
+  href: string;
+  className?: string;
+  textClassName?: string;
 }
 
-const Button = ({ children }: ButtonProps) => {
+const Button = ({ children, href, className, textClassName }: ButtonProps) => {
   return (
-    <div
-      className={`bg-enviro-green-50 lg:6/12 xl:4/12 px-2 py-2 shadow-md sm:w-10/12 md:w-8/12`}
-    >
-      <div className="relative">
-        <Image src={Border} alt="" className="h-auto w-full rounded-xs" />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <p
-            className={`text-enviro-green-200 font-enviro-open-sans sm:text-xl md:text-xl lg:text-2xl xl:text-3xl`}
-          >
-            {children}
-          </p>
+    <Link href={href}>
+      <motion.div
+        initial={{ scale: 1 }}
+        whileTap={{ scale: 0.9 }}
+        className={`bg-enviro-green-50 mx-auto px-2 py-2 shadow-md ${className}`}
+      >
+        <div className="relative">
+          <Image src={Border} alt="" className="h-auto w-full rounded-xs" />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <p
+              className={`text-enviro-green-200 font-enviro-open-sans hover:cursor-pointer ${textClassName}`}
+            >
+              {children}
+            </p>
+          </div>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </Link>
   );
 };
 
