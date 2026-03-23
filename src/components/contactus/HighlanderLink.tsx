@@ -22,7 +22,7 @@ const HighlanderLink = () => {
         </div>
 
         <div className="mt-auto w-full md:mt-15 md:w-1/2">
-          <Button width="w-1/2" text="text-2xl">
+          <Button href="" textSize="text-3xl">
             Click Here
           </Button>
         </div>
