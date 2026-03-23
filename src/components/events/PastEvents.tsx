@@ -85,10 +85,11 @@ const PastEvents = () => {
           />
         </div>
       </div>
-
-      <Button width="w-1/5" text="text-3xl">
-        See More
-      </Button>
+      <div className="w-1/5">
+        <Button href="" textSize="text-3xl">
+          See More
+        </Button>
+      </div>
     </div>
   );
 };

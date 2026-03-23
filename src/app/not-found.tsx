@@ -17,13 +17,11 @@ const NotFound = () => {
         <div className="font-enviro-open-sans text-2xl sm:text-3xl lg:text-4xl">
           page not found
         </div>
-        <Button
-          href="/"
-          className="w-8/12 sm:w-8/12 md:w-9/12 xl:w-10/12"
-          textClassName="text-lg sm:text-2xl xl:text-3xl"
-        >
-          Return Home
-        </Button>
+        <div className="w-6/12 sm:w-5/12 lg:w-4/12 xl:w-3/12">
+          <Button href="/" textSize="text-lg sm:text-2xl xl:text-3xl">
+            Return Home
+          </Button>
+        </div>
       </div>
     </div>
   );

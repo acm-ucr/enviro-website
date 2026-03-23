@@ -8,23 +8,26 @@ import { motion } from "motion/react";
 interface ButtonProps {
   children: ReactNode;
   href: string;
-  className?: string;
-  textClassName?: string;
+  textSize?: string;
 }
 
-const Button = ({ children, href, className, textClassName }: ButtonProps) => {
+const Button = ({ children, href, textSize }: ButtonProps) => {
   return (
     <Link href={href}>
       <motion.div
         initial={{ scale: 1 }}
         whileTap={{ scale: 0.9 }}
-        className={`bg-enviro-green-50 mx-auto px-2 py-2 shadow-md ${className}`}
+        className={`bg-enviro-green-50 mx-auto px-2 py-2 shadow-md`}
       >
         <div className="relative">
-          <Image src={Border} alt="" className="h-auto w-full rounded-xs" />
+          <Image
+            src={Border}
+            alt=""
+            className="pointer-events-none h-auto w-full rounded-xs"
+          />
           <div className="absolute inset-0 flex items-center justify-center">
             <p
-              className={`text-enviro-green-200 font-enviro-open-sans hover:cursor-pointer ${textClassName}`}
+              className={`text-enviro-green-200 font-enviro-open-sans hover:cursor-pointer ${textSize}`}
             >
               {children}
             </p>

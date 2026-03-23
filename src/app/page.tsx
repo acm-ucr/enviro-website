@@ -9,7 +9,7 @@ import Flower from "@/public/Flower.webp";
 const Home = () => {
   return (
     <div className="relative flex w-full flex-col items-center justify-center">
-      <div className="z-0">
+      <div className="z-10">
         <OurMission />
       </div>
       {/* Flower */}
@@ -21,7 +21,7 @@ const Home = () => {
       <Image
         src={Jagged}
         alt="Jagged BG"
-        className="absolute inset-0 top-[65vh] z-10 w-full"
+        className="absolute inset-0 top-[76vh] z-10 w-full"
       />
       <div className="z-10">
         <UpcomingEvents />
