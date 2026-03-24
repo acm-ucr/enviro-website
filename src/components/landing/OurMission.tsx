@@ -5,6 +5,7 @@ import Tape from "@/public/tape.webp";
 import Line from "@/public/Home/SquigglyLine.svg";
 import Gradient from "@/public/Gradient.webp";
 import Jagged from "@/public/Jagged.webp";
+import JaggedMobile from "@/public/Home/JaggedMobile.webp";
 import Flower from "@/public/Flower.webp";
 
 const OurMission = () => {
@@ -16,9 +17,9 @@ const OurMission = () => {
         className="z-0 col-start-1 row-start-1 h-10/12 w-full"
       />
       {/* Content */}
-      <div className="z-10 col-start-1 row-start-1 -mt-30 flex items-center justify-around">
+      <div className="z-10 col-start-1 row-start-1 flex flex-col items-center justify-around md:-mt-30 md:flex-row">
         {/* Left side */}
-        <div className="relative -mt-50 w-1/2">
+        <div className="relative mt-15 w-full md:-mt-50 md:w-1/2">
           <div className="bg-enviro-gray-100 mx-5 pb-10 shadow-lg">
             <Image
               src={MissionStatement}
@@ -30,20 +31,20 @@ const OurMission = () => {
           <Image
             src={Tape}
             alt=""
-            className="absolute -top-5 left-1/2 w-80 -translate-x-1/2 opacity-70"
+            className="absolute -top-5 left-1/2 w-50 -translate-x-1/2 opacity-80 md:w-80"
           />
         </div>
         {/* Right side */}
-        <div className="flex h-8/12 w-4/10 flex-col items-center gap-2 text-center text-white">
-          <div className="font-enviro-single-day text-6xl">
+        <div className="flex h-8/12 w-full flex-col items-center gap-2 text-center text-white md:w-4/10">
+          <div className="font-enviro-single-day mt-2 text-3xl md:mt-0 md:text-4xl lg:text-5xl xl:text-6xl">
             Our Mission Statement
           </div>
           <Image
             src={Line}
             alt="Squiggly Line"
-            className="pointer-events-none w-full pb-5"
+            className="pointer-events-none w-9/12 pb-5 md:w-full"
           />
-          <div className="pb-10 text-3xl">
+          <div className="text-md w-10/12 pb-10 lg:text-xl xl:text-3xl">
             We are the Environmental Science Club, a vibrant community of
             students committed to understanding and protecting the environment.
             Our mission is to raise global awareness about ecological issues and
@@ -51,7 +52,7 @@ const OurMission = () => {
             involvement.
           </div>
           <div className="w-1/2">
-            <Button href="" textSize="text-3xl">
+            <Button href="" textSize="text-xl lg:text-2xl xl:text-3xl">
               Learn More
             </Button>
           </div>
@@ -60,9 +61,18 @@ const OurMission = () => {
       <Image
         src={Jagged}
         alt="Jagged Edge"
-        className="z-0 col-start-1 row-start-1 mt-130 w-full"
+        className="z-0 col-start-1 row-start-1 mt-130 hidden w-full md:block"
       />
-      <Image src={Flower} alt="" className="z-20 -mt-115 -ml-30" />
+      <Image
+        src={JaggedMobile}
+        alt="Jagged Edge Mobile"
+        className="z-0 col-start-1 row-start-1 mt-150 block w-full md:hidden"
+      />
+      <Image
+        src={Flower}
+        alt="Green Flower"
+        className="z-20 -mt-92 -ml-38 hidden scale-40 md:-mt-115 md:-ml-30 md:scale-100 lg:block"
+      />
     </div>
   );
 };
