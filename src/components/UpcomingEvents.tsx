@@ -4,7 +4,7 @@ import Button from "@/components/Button";
 
 const UpcomingEvent = () => {
   return (
-    <div className="text-enviro-gray-100 flex flex-col items-center justify-center gap-y-12">
+    <div className="text-enviro-gray-100 -mt-12 flex flex-col items-center justify-center gap-y-12">
       <Subheading title="Upcoming Events" bg="bg-enviro-green-100" text="" />
       <div className="flex flex-col items-center gap-y-10">
         <EventCard
@@ -26,8 +26,8 @@ const UpcomingEvent = () => {
           link="/"
         />
       </div>
-      <div className="w-3/12 pb-10">
-        <Button href="" textSize="text-3xl">
+      <div className="w-1/2 pb-10 md:w-3/12">
+        <Button href="" textSize="text-xl md:text-2xl lg:text-3xl xl:text-4xl">
           See More
         </Button>
       </div>

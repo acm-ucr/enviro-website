@@ -17,7 +17,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="font-enviro-single-day fixed top-0 right-0 left-0 z-50 w-full text-black">
+    <div className="font-enviro-single-day w-full text-black">
       <div className="relative w-full overflow-hidden md:hidden">
         <Image
           src={isOpen ? navbarOpen : navbarClose}
