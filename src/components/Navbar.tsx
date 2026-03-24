@@ -11,23 +11,21 @@ const Navbar = () => {
   const pathName = usePathname();
 
   return (
-    <div className="font-enviro-single-day absolute top-0 left-0 z-50 h-45 w-full text-black">
+    <div className="font-enviro-single-day grid w-full text-black">
       <Image
-        className="overflow-hidden object-cover object-top"
+        className="z-0 col-start-1 row-start-1 w-full"
         src={navbarBg}
         alt="NavBar Background"
-        fill
       />
 
-      <div className="absolute inset-0 z-10 flex px-6">
+      <div className="z-10 col-start-1 row-start-1 mx-6 flex">
         <Image
-          className="-ml-5 shrink-0 scale-90"
+          className="-mt-[2%] -ml-5 w-1/10 object-contain"
           src={enviroLogo}
           alt="Environmental Science Club Logo"
-          width={180}
         />
 
-        <div className="ml-auto flex items-center justify-end gap-15 text-4xl">
+        <div className="ml-auto flex items-center justify-end gap-10 text-lg md:text-3xl lg:gap-15 lg:text-5xl">
           {navigations.map(({ link, name }, index) => (
             <div key={index}>
               <Link

@@ -20,3 +20,9 @@ body {
   font-family: var(--font-enviro-open-sans);
   background-image: url("/GrayBG.webp");
 }
+
+@layer utilities {
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+}
