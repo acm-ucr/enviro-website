@@ -3,14 +3,22 @@ import Image from "next/image";
 import MissionStatement from "@/public/Home/MissionStatement.webp";
 import Tape from "@/public/tape.webp";
 import Line from "@/public/Home/SquigglyLine.svg";
+import Gradient from "@/public/Gradient.webp";
+import Jagged from "@/public/Jagged.webp";
+import Flower from "@/public/Flower.webp";
 
 const OurMission = () => {
   return (
-    <div className="bg-[url(/Home/Gradient.webp)] py-12 pt-12 pb-50">
+    <div className="grid">
+      <Image
+        src={Gradient}
+        alt="Gradient Background"
+        className="z-0 col-start-1 row-start-1 h-10/12 w-full"
+      />
       {/* Content */}
-      <div className="z-10 flex items-center justify-around">
+      <div className="z-10 col-start-1 row-start-1 -mt-30 flex items-center justify-around">
         {/* Left side */}
-        <div className="relative w-1/2">
+        <div className="relative -mt-50 w-1/2">
           <div className="bg-enviro-gray-100 mx-5 pb-10 shadow-lg">
             <Image
               src={MissionStatement}
@@ -49,6 +57,12 @@ const OurMission = () => {
           </div>
         </div>
       </div>
+      <Image
+        src={Jagged}
+        alt="Jagged Edge"
+        className="z-0 col-start-1 row-start-1 mt-130 w-full"
+      />
+      <Image src={Flower} alt="" className="z-20 -mt-115 -ml-30" />
     </div>
   );
 };
