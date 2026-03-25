@@ -4,7 +4,7 @@ import * as React from "react";
 import { DayPicker } from "react-day-picker";
 import { useState } from "react";
 import { GoogleEventProps } from "@/components/calendar/Calendar";
-import { CalendarTop } from "@/components/calendar/CalendarParts";
+import { CalendarTop } from "@/components/calendar/CalendarTop";
 import "react-day-picker/dist/style.css";
 
 export type CalendarProps = React.ComponentProps<typeof DayPicker> & {
