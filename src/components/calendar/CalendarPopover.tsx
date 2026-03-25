@@ -20,15 +20,6 @@ interface CalendarEventPopoverProps {
   description?: string;
 }
 
-const dayClasses: Record<number, string> = {
-  0: "bg-winc-red-400 text-white",
-  1: "bg-winc-yellow-200 text-winc-blue-500",
-  2: "bg-winc-orange-100 text-white",
-  3: "bg-winc-yellow-200 text-winc-blue-500",
-  4: "bg-winc-orange-100 text-white",
-  5: "bg-winc-yellow-200 text-winc-blue-500",
-  6: "bg-winc-red-400 text-white",
-};
 
 const CalendarEventPopover = ({
   startDate,
@@ -75,13 +66,14 @@ const CalendarEventPopover = ({
     }
   }
 
-  const dayClass = dayClasses[date.getDay()] ?? "bg-white";
-
   return (
     <Dialog>
       <DialogTrigger
-        className={`flex w-full cursor-pointer justify-center py-1 text-left font-bold hover:opacity-75 ${dayClass}`}
+        className={`flex w-full cursor-pointer border border-enviro-green-200 bg-enviro-blue-100 text-enviro-gray-100 items-center py-1 text-left font-enviro-open-sans hover:opacity-75`}
       >
+        <span className="overflow-hidden text-ellipsis whitespace-nowrap px-1 text-xs">
+          {title}
+        </span>
         <span className="pr-1 text-right text-xs">
           {hasStartTime &&
             eventStartDate.toLocaleTimeString("en-US", {
@@ -90,14 +82,12 @@ const CalendarEventPopover = ({
               timeZone: "America/Los_Angeles",
             })}
         </span>
-        <span className="overflow-hidden text-ellipsis whitespace-nowrap px-1 pl-1 text-xs">
-          {title}
-        </span>
+        
       </DialogTrigger>
-      <DialogOverlay className="bg-gray-400/60">
-        <DialogContent className="z-50 border-2 border-black bg-winc-yellow-200 p-0 text-winc-blue-500 shadow-md">
+      <DialogOverlay className="bg-enviro-gray-100/50">
+        <DialogContent className="z-50 border-2 border-black bg-enviro-blue-100 p-0 text-enviro-green-300 shadow-md">
           <DialogTitle>
-            <div className="flex items-center justify-between px-4 pt-2 text-xl font-semibold">
+            <div className="flex items-center justify-between px-4 pt-2 text-xl">
               <p className="truncate">{title}</p>
             </div>
           </DialogTitle>

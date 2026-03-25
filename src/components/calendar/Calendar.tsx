@@ -92,7 +92,16 @@ const Calendar = () => {
         selected={date}
         onSelect={setDate}
         className="w-full"
-        events={data?.allEvents ?? []}
+        events={[
+    ...(data?.allEvents ?? []), 
+    {
+      summary: "Test Event",
+      start: { dateTime: new Date().toISOString() }, // Today!
+      end: { dateTime: new Date(Date.now() + 3600000).toISOString() }, // +1 hour
+      location: "Room 302",
+      description: "Testing testing 123."
+    }
+  ]}
       />
       <UpcomingEvents />
     </div>

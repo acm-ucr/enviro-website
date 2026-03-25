@@ -5,13 +5,15 @@ import { DayPicker } from "react-day-picker";
 import { useState } from "react";
 import { GoogleEventProps } from "@/components/calendar/Calendar";
 import { CalendarTop } from "@/components/calendar/CalendarTop";
+import CalendarDay from "@/components/calendar/CalendarDay";
+import { Day as DefaultDay } from "react-day-picker";
 import "react-day-picker/dist/style.css";
 
 export type CalendarProps = React.ComponentProps<typeof DayPicker> & {
   events: GoogleEventProps[];
 };
 
-function Calendar({ className, classNames }: CalendarProps) {
+function Calendar({ className, classNames, events, ...props  }: CalendarProps) {
   const [currentDate, setCurrentDate] = useState(new Date());
   const today = new Date();
 
@@ -52,7 +54,7 @@ function Calendar({ className, classNames }: CalendarProps) {
           month={currentDate}
           mode="single"
           selected={selectedDay}
-          onSelect={setSelectedDay}
+          onSelect={setSelectedDay as (day: Date | undefined) => void}
           showOutsideDays={true}
           onMonthChange={setCurrentDate}
           disableNavigation
@@ -80,13 +82,27 @@ function Calendar({ className, classNames }: CalendarProps) {
 
             day: "border border-width-2 border-enviro-green-100 bg-enviro-gray-100 h-15 md:h-35 flex justify-end font-enviro-open-sans text-xl md:text-4xl",
             range_end: "",
-            selected: "opacity-100 bg-green-100",
+            selected: "",
             outside: "text-gray-500",
             disabled: "",
             range_middle: "",
 
             ...classNames,
           }}
+         components={{
+  Day: (props) => {
+    return (
+      <DefaultDay {...props}>
+        <CalendarDay
+          date={props.day.date}
+          displayMonth={currentDate}
+          events={events}
+        />
+      </DefaultDay>
+    );
+  },
+}}
+        {...props}
         />
       </div>
     </div>
