@@ -10,16 +10,16 @@ import Flower from "@/public/Flower.webp";
 
 const OurMission = () => {
   return (
-    <div className="grid">
+    <div className="relative grid">
       <Image
         src={Gradient}
         alt="Gradient Background"
-        className="z-0 col-start-1 row-start-1 h-10/12 w-full"
+        className="z-0 col-start-1 row-start-1 h-10/12 w-full sm:-mt-10 2xl:w-screen"
       />
       {/* Content */}
-      <div className="z-10 col-start-1 row-start-1 flex flex-col items-center justify-around md:-mt-30 md:flex-row">
+      <div className="z-10 col-start-1 row-start-1 flex flex-col items-center justify-around md:absolute md:top-[15vh] md:flex-row">
         {/* Left side */}
-        <div className="relative mt-15 w-full md:-mt-50 md:w-1/2">
+        <div className="relative mt-15 w-full md:-top-[15vh] md:w-1/2">
           <div className="bg-enviro-gray-100 mx-5 pb-10 shadow-lg">
             <Image
               src={MissionStatement}
@@ -31,28 +31,28 @@ const OurMission = () => {
           <Image
             src={Tape}
             alt=""
-            className="absolute -top-5 left-1/2 w-50 -translate-x-1/2 opacity-80 md:w-80"
+            className="absolute -top-5 left-1/2 w-50 -translate-x-1/2 opacity-80 md:w-55"
           />
         </div>
         {/* Right side */}
         <div className="flex h-8/12 w-full flex-col items-center gap-2 text-center text-white md:w-4/10">
-          <div className="font-enviro-single-day mt-2 text-3xl md:mt-0 md:text-4xl lg:text-5xl xl:text-6xl">
+          <div className="font-enviro-single-day mt-2 text-3xl sm:text-4xl md:mt-0 md:text-4xl md:whitespace-nowrap lg:text-5xl xl:text-6xl">
             Our Mission Statement
           </div>
           <Image
             src={Line}
             alt="Squiggly Line"
-            className="pointer-events-none w-9/12 pb-5 md:w-full"
+            className="pointer-events-none w-9/12 pb-5 sm:pb-2 md:w-full"
           />
-          <div className="text-md w-10/12 pb-10 lg:text-xl xl:text-3xl">
+          <div className="text-md w-10/12 pb-5 sm:pb-2 sm:text-lg md:w-full lg:text-xl xl:text-2xl">
             We are the Environmental Science Club, a vibrant community of
             students committed to understanding and protecting the environment.
             Our mission is to raise global awareness about ecological issues and
             inspire action through education, advocacy, and hands-on
             involvement.
           </div>
-          <div className="w-1/2">
-            <Button href="" textSize="text-xl lg:text-2xl xl:text-3xl">
+          <div className="w-5/12 sm:w-1/3 md:w-1/2 xl:w-5/12">
+            <Button href="" textSize="text-lg lg:text-2xl xl:text-2xl">
               Learn More
             </Button>
           </div>
@@ -61,17 +61,17 @@ const OurMission = () => {
       <Image
         src={Jagged}
         alt="Jagged Edge"
-        className="z-0 col-start-1 row-start-1 mt-130 hidden w-full md:block"
+        className="z-0 col-start-1 row-start-1 mt-130 hidden w-full md:mt-115 md:block"
       />
       <Image
         src={JaggedMobile}
         alt="Jagged Edge Mobile"
-        className="z-0 col-start-1 row-start-1 mt-150 block w-full md:hidden"
+        className="z-0 col-start-1 row-start-1 mt-150 block w-full scale-x-[1.01] md:hidden"
       />
       <Image
         src={Flower}
         alt="Green Flower"
-        className="z-20 -mt-92 -ml-38 hidden scale-40 md:-mt-115 md:-ml-30 md:scale-100 lg:block"
+        className="absolute right-[46vw] bottom-[3vh] z-20 scale-35 sm:bottom-[25vh] sm:-left-[25vw] sm:scale-45 md:-bottom-[4vh] md:-left-[20vw] lg:bottom-[5vh] lg:-left-[13vw] lg:scale-70 xl:bottom-[12vh] xl:scale-90 2xl:top-[65vh] 2xl:-left-[10vw] 2xl:scale-100"
       />
     </div>
   );
