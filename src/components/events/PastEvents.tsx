@@ -86,15 +86,11 @@ const PastEvents = () => {
           />
         </div>
       </div>
-
-      <Button width="w-1/5" text="text-3xl">
-        See More
-      </Button>
-      <Image
-        src={GreenMiddle}
-        alt="Green Middle Rip"
-        className="absolute -top-20 z-10 w-full"
-      />
+      <div className="w-1/5">
+        <Button href="" textSize="text-3xl">
+          See More
+        </Button>
+      </div>
     </div>
   );
 };

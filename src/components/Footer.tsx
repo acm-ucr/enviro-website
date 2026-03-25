@@ -10,29 +10,31 @@ const Footer = () => {
         <Image
           src={Logo}
           alt="Environmental Science Club @ UCR Logo"
-          className="w-1/5"
+          className="h-auto w-1/5 object-contain"
         />
         <div className="mt-5 flex flex-col justify-center gap-y-2">
           <div>
-            <div className="bg-enviro-gray-100 outline-enviro-green-300 inline-block p-2 shadow-md shadow-gray-500 outline-1">
-              <div className="bg-enviro-green-200 px-8">
-                <p className="font-enviro-bagel-fat-one pb-2 text-7xl [text-shadow:_1px_1px_0_#000,_-1px_1px_0_#000,_1px_-1px_0_#000,_-1px_-1px_0_#000]">
+            <div className="bg-enviro-gray-100 outline-enviro-green-300 inline-block p-1 shadow-md shadow-gray-500 outline-1 md:p-1.5 lg:p-2">
+              <div className="bg-enviro-green-200 px-3 md:px-5 lg:px-8">
+                <p className="font-enviro-bagel-fat-one pb-1 text-3xl [text-shadow:_1px_1px_0_#000,_-1px_1px_0_#000,_1px_-1px_0_#000,_-1px_-1px_0_#000] md:pb-2 md:text-5xl lg:text-7xl">
                   ENSC
                 </p>
               </div>
             </div>
           </div>
-          <p className="text-3xl">ENVIRONMENTAL SCIENCE CLUB @ UCR</p>
+          <p className="text-md whitespace-nowrap md:text-3xl">
+            ENVIRONMENTAL SCIENCE CLUB @ UCR
+          </p>
         </div>
       </div>
-      <div className="mr-[10vw] flex items-center">
-        <div className="flex flex-col gap-y-3">
-          <p className="text-4xl">Contact Us</p>
+      <div className="-mt-6 mr-[10vw] flex items-center lg:mt-0">
+        <div className="flex flex-col gap-y-1 lg:gap-y-3">
+          <p className="text-lg whitespace-nowrap md:text-4xl">Contact Us</p>
           <div className="flex justify-center gap-x-[20%]">
             {footerData.map(({ Icon, link }, index) => (
               <div key={index}>
                 <Link href={link} target="_blank">
-                  <Icon className="hover:text-enviro-green-300 w-auto transform text-5xl transition hover:scale-110" />
+                  <Icon className="hover:text-enviro-green-300 w-auto transform text-2xl transition hover:scale-110 md:text-4xl lg:text-5xl" />
                 </Link>
               </div>
             ))}

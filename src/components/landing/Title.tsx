@@ -13,21 +13,17 @@ const Title = () => {
           alt="Notebook Background"
         />
       </div>
-      <div className="mx-auto w-6xl px-2">
-        <div className="p-l-5 grid grid-cols-1 items-center gap-10 md:grid-cols-2">
+      <div className="mx-auto w-full px-2">
+        <div className="p-l-5 grid grid-cols-1 gap-10 md:grid-cols-2">
           {/* LEFT */}
-          <div className="ml-5 pt-10">
-            <div className="font-enviro-single-day text-enviro-green-300 text-4xl whitespace-nowrap md:text-6xl">
+          <div className="mt-[12%] ml-[22%]">
+            <div className="font-enviro-single-day text-enviro-green-300 text-2xl whitespace-nowrap md:text-4xl lg:text-7xl">
               Environmental Science Club
             </div>
 
-            <div className="font-enviro-open-sans text-1xl text-enviro-green-200 my-6 max-w-lg leading-relaxed font-semibold md:text-3xl">
+            <div className="font-enviro-open-sans text-enviro-green-200 max-w-lg text-sm leading-relaxed font-semibold md:text-lg lg:text-4xl">
               Informing, empowering, and mobilizing students to lead
               sustainability efforts at UC Riverside.
-            </div>
-
-            <div className="mt-2 md:mt-10">
-              <Button width="w-1/2" text="text-3xl" children={"Contact Us"} />
             </div>
           </div>
 
@@ -39,6 +35,13 @@ const Title = () => {
               className="h-auto w-3/5 drop-shadow-md md:w-full"
             />
           </div>
+        </div>
+        <div className="z-10 -mt-[20%] ml-[10%] w-1/4">
+          <Button
+            href=""
+            children={"Contact Us"}
+            textSize="text-2xl lg:text-4xl"
+          />
         </div>
       </div>
     </div>
