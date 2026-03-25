@@ -5,7 +5,6 @@ import eventPic1 from "@/public/Events/Event1.webp";
 import eventPic2 from "@/public/Events/Event2.webp";
 import Image from "next/image";
 import Flower from "@/public/Home/FlowerBG.webp";
-import GreenMiddle from "@/public/Events/GreenMiddle.webp";
 
 const PastEvents = () => {
   return (
