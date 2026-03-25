@@ -6,7 +6,7 @@ import Interested from "@/components/landing/Interested";
 
 const Home = () => {
   return (
-    <div className="relative flex w-full flex-col items-center justify-center">
+    <div className="flex min-h-screen w-full flex-col items-center justify-center">
       <Title />
       <OurMission />
       <UpcomingEvents />
