@@ -20,7 +20,6 @@ interface CalendarEventPopoverProps {
   description?: string;
 }
 
-
 const CalendarEventPopover = ({
   startDate,
   endDate,
@@ -69,9 +68,9 @@ const CalendarEventPopover = ({
   return (
     <Dialog>
       <DialogTrigger
-        className={`flex w-full cursor-pointer border border-enviro-green-200 bg-enviro-blue-100 text-enviro-gray-100 items-center py-1 text-left font-enviro-open-sans hover:opacity-75`}
+        className={`border-enviro-green-200 bg-enviro-blue-100 text-enviro-gray-100 font-enviro-open-sans flex w-full cursor-pointer items-center border py-1 text-left hover:opacity-75`}
       >
-        <span className="overflow-hidden text-ellipsis whitespace-nowrap px-1 text-xs">
+        <span className="overflow-hidden px-1 text-xs text-ellipsis whitespace-nowrap">
           {title}
         </span>
         <span className="pr-1 text-right text-xs">
@@ -82,10 +81,9 @@ const CalendarEventPopover = ({
               timeZone: "America/Los_Angeles",
             })}
         </span>
-        
       </DialogTrigger>
       <DialogOverlay className="bg-enviro-gray-100/50">
-        <DialogContent className="z-50 border-2 border-black bg-enviro-blue-100 p-0 text-enviro-green-300 shadow-md">
+        <DialogContent className="bg-enviro-blue-100 text-enviro-green-300 z-50 border-2 border-black p-0 shadow-md">
           <DialogTitle>
             <div className="flex items-center justify-between px-4 pt-2 text-xl">
               <p className="truncate">{title}</p>
@@ -94,7 +92,7 @@ const CalendarEventPopover = ({
 
           <div className="rounded-b-xl bg-white px-4 py-3 text-lg">
             <div className="flex">
-              <p className="whitespace-nowrap pr-2">
+              <p className="pr-2 whitespace-nowrap">
                 {date.toLocaleString("default", {
                   month: "short",
                   day: "numeric",
@@ -104,7 +102,7 @@ const CalendarEventPopover = ({
               <div>{hasStartTime && <p>{timeRangeDisplay}</p>}</div>
             </div>
             <p>{location}</p>
-            {description && <p className="pb-4 pt-4">{description}</p>}
+            {description && <p className="pt-4 pb-4">{description}</p>}
           </div>
         </DialogContent>
       </DialogOverlay>

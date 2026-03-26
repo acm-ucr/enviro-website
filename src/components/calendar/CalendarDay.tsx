@@ -26,8 +26,7 @@ const CalendarDay = ({ date, displayMonth, events }: DayProps) => {
 
   const isPastDay = date < new Date(new Date().setHours(0, 0, 0, 0));
 
-  const isOutsideMonth =
-    date.getMonth() !== displayMonth.getMonth();
+  const isOutsideMonth = date.getMonth() !== displayMonth.getMonth();
 
   const filteredEvents = events.filter((event) => {
     let start: Date | null = null;
@@ -66,14 +65,12 @@ const CalendarDay = ({ date, displayMonth, events }: DayProps) => {
 
   return (
     <div
-      className={`relative h-full w-full ${
-        isOutsideMonth ? "opacity-40" : ""
-      }`}
+      className={`relative h-full w-full ${isOutsideMonth ? "opacity-40" : ""}`}
     >
       <div
-        className={`absolute right-1.5 top-1.5 text-lg md:text-3xl font-enviro-open-sans ${
+        className={`font-enviro-open-sans absolute top-1.5 right-1.5 text-lg md:text-3xl ${
           isToday
-            ? "bg-enviro-green-100 text-white rounded-full w-6 h-6 md:w-12 md:h-12 flex items-center justify-center"
+            ? "bg-enviro-green-100 flex h-6 w-6 items-center justify-center rounded-full text-white md:h-12 md:w-12"
             : "text-enviro-200"
         }`}
       >
@@ -85,19 +82,17 @@ const CalendarDay = ({ date, displayMonth, events }: DayProps) => {
           isPastDay ? "text-gray-400" : ""
         }`}
       >
-        {filteredEvents
-          .slice(0, displayCount)
-          .map((event, i) => (
-            <CalendarEventPopover
-              key={i}
-              startDate={event.start}
-              endDate={event.end}
-              title={event.summary}
-              description={event.description}
-              date={date}
-              location={event.location || "TBD"}
-            />
-          ))}
+        {filteredEvents.slice(0, displayCount).map((event, i) => (
+          <CalendarEventPopover
+            key={i}
+            startDate={event.start}
+            endDate={event.end}
+            title={event.summary}
+            description={event.description}
+            date={date}
+            location={event.location || "TBD"}
+          />
+        ))}
 
         {filteredEvents.length > visibleEventCount && (
           <Popover>

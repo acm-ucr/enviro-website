@@ -13,7 +13,7 @@ export type CalendarProps = React.ComponentProps<typeof DayPicker> & {
   events: GoogleEventProps[];
 };
 
-function Calendar({ className, classNames, events, ...props  }: CalendarProps) {
+function Calendar({ className, classNames, events, ...props }: CalendarProps) {
   const [currentDate, setCurrentDate] = useState(new Date());
   const today = new Date();
 
@@ -40,7 +40,6 @@ function Calendar({ className, classNames, events, ...props  }: CalendarProps) {
     );
     setCurrentDate(newDate);
   };
-  const [selectedDay, setSelectedDay] = useState<Date | undefined>(new Date());
 
   return (
     <div className="mb-10 h-full w-2/3">
@@ -49,12 +48,10 @@ function Calendar({ className, classNames, events, ...props  }: CalendarProps) {
         onPrevMonth={prevMonth}
         onNextMonth={nextMonth}
       />
-      <div className="bg-enviro-blue-100 h-full rounded-3xl px-3 md:px-6 pb-5">
+      <div className="bg-enviro-blue-100 h-full rounded-3xl px-3 pb-5 md:px-6">
         <DayPicker
           month={currentDate}
           mode="single"
-          selected={selectedDay}
-          onSelect={setSelectedDay as (day: Date | undefined) => void}
           showOutsideDays={true}
           onMonthChange={setCurrentDate}
           disableNavigation
@@ -89,20 +86,20 @@ function Calendar({ className, classNames, events, ...props  }: CalendarProps) {
 
             ...classNames,
           }}
-         components={{
-  Day: (props) => {
-    return (
-      <DefaultDay {...props}>
-        <CalendarDay
-          date={props.day.date}
-          displayMonth={currentDate}
-          events={events}
-        />
-      </DefaultDay>
-    );
-  },
-}}
-        {...props}
+          components={{
+            Day: (props) => {
+              return (
+                <DefaultDay {...props}>
+                  <CalendarDay
+                    date={props.day.date}
+                    displayMonth={currentDate}
+                    events={events}
+                  />
+                </DefaultDay>
+              );
+            },
+          }}
+          {...props}
         />
       </div>
     </div>

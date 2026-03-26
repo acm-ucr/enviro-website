@@ -84,24 +84,26 @@ const Calendar = () => {
       <Image
         src={Earth}
         alt="Earth"
-        className="md:-mt-50 w-1/2 justify-self-center opacity-15"
+        className="w-1/2 justify-self-center opacity-15 md:-mt-50"
       />
-      <div className="font-enviro-single-day md:mt-5 py-5 md:py-20 text-4xl md:text-7xl">Events</div>
+      <div className="font-enviro-single-day py-5 text-4xl md:mt-5 md:py-20 md:text-7xl">
+        Events
+      </div>
       <UICalendar
         mode="single"
         selected={date}
         onSelect={setDate}
         className="w-full"
         events={[
-    ...(data?.allEvents ?? []), 
-    {
-      summary: "Test Event",
-      start: { dateTime: new Date().toISOString() }, // Today!
-      end: { dateTime: new Date(Date.now() + 3600000).toISOString() }, // +1 hour
-      location: "Room 302",
-      description: "Testing testing 123."
-    }
-  ]}
+          ...(data?.allEvents ?? []),
+          {
+            summary: "Test Event",
+            start: { dateTime: new Date().toISOString() },
+            end: { dateTime: new Date(Date.now() + 3600000).toISOString() },
+            location: "Room 302",
+            description: "Testing testing 123.",
+          },
+        ]}
       />
       <UpcomingEvents />
     </div>
