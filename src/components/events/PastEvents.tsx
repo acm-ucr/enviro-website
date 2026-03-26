@@ -8,7 +8,7 @@ import Flower from "@/public/Home/FlowerBG.webp";
 
 const PastEvents = () => {
   return (
-    <div className="flex flex-col items-center justify-center gap-16 bg-[url(/Events/GreenBG.webp)] pt-16 pb-10">
+    <div className="relative flex flex-col items-center justify-center gap-16 bg-[url(/Events/GreenBG.webp)] pt-16 pb-10">
       <Subheading
         title="Past Events Highlights"
         bg="bg-enviro-green-100"
