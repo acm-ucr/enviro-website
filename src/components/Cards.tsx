@@ -31,25 +31,14 @@ const mockEvents: GoogleEventProps[] = [
   },
 ];
 
-const eventsVariant = {
-  variants: {
-    hidden: { opacity: 0, y: -20 },
-    show: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        staggerChildren: 0.7,
-      },
-    },
-  },
-  initial: "hidden",
-  whileInView: "show",
-  viewport: { once: true },
-};
 const childVariant = {
-  variants: {
-    hidden: { opacity: 0, y: -20 },
-    show: { opacity: 1, y: 0 },
+  hidden: { opacity: 0, y: -20 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.4,
+    },
   },
 };
 
@@ -78,7 +67,19 @@ const Cards = ({ events, isLoading, isError }: EventProps) => {
   return (
     <motion.div
       className="mx-auto mb-10 grid w-11/12 gap-y-15 md:w-7/12"
-      {...eventsVariant}
+      variants={{
+        hidden: { opacity: 0, y: -20 },
+        show: {
+          opacity: 1,
+          y: 0,
+          transition: {
+            staggerChildren: 0.3,
+          },
+        },
+      }}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
     >
       {displayEvents.map((event, index) => {
         const dateObj = new Date(

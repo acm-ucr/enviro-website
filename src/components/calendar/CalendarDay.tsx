@@ -78,7 +78,7 @@ const CalendarDay = ({ date, displayMonth, events }: DayProps) => {
       </div>
 
       <div
-        className={`mt-15 flex flex-col gap-1 px-1 ${
+        className={`mt-3 flex flex-col gap-1 px-1 md:mt-15 ${
           isPastDay ? "text-gray-400" : ""
         }`}
       >

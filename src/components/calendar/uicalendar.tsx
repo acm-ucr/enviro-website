@@ -42,13 +42,13 @@ function Calendar({ className, classNames, events, ...props }: CalendarProps) {
   };
 
   return (
-    <div className="mb-10 h-full w-2/3">
+    <div className="mb-10 h-full w-11/12 justify-center md:w-2/3">
       <CalendarTop
         currentDate={currentDate}
         onPrevMonth={prevMonth}
         onNextMonth={nextMonth}
       />
-      <div className="bg-enviro-blue-100 h-full rounded-3xl px-3 pb-5 md:px-6">
+      <div className="bg-enviro-blue-100 h-full justify-center rounded-3xl px-3 pb-5 md:px-6">
         <DayPicker
           month={currentDate}
           mode="single"
@@ -65,10 +65,10 @@ function Calendar({ className, classNames, events, ...props }: CalendarProps) {
           className={`${className ?? ""}`}
           classNames={{
             months: "",
-            month: "flex flex-col w-full h-full",
+            month: "flex flex-col w-full",
             today: "",
 
-            month_grid: "h-full",
+            month_grid: "-mt-6 md:-mt-4 h-full",
 
             weekdays:
               "grid grid-cols-7 bg-enviro-green-200 text-white text-xl md:text-4xl font-enviro-open-sans",

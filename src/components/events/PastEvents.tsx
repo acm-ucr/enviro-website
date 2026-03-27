@@ -1,3 +1,4 @@
+"use client";
 import Subheading from "@/components/Subheading";
 import Button from "@/components/Button";
 import Tape from "@/public/tape.webp";
@@ -5,28 +6,35 @@ import eventPic1 from "@/public/Events/Event1.webp";
 import eventPic2 from "@/public/Events/Event2.webp";
 import Image from "next/image";
 import Flower from "@/public/Home/FlowerBG.webp";
+import { motion } from "motion/react";
 
 const PastEvents = () => {
   return (
-    <div className="relative flex flex-col items-center justify-center gap-16 bg-[url(/Events/GreenBG.webp)] pt-16 pb-10">
+    <motion.div className="relative flex flex-col items-center justify-center gap-16 bg-[url(/Events/GreenBG.webp)] pt-16 pb-10">
       <Subheading
         title="Past Events Highlights"
         bg="bg-enviro-green-100"
         text="text-white"
       />
-      <div className="flex flex-row items-center justify-center gap-x-16">
-        <div className="relative w-1/3">
-          <div className="bg-enviro-green-50 rounded-4xl px-4 py-8">
-            <div className="bg-enviro-gray-100 mx-5 pb-5 shadow-lg">
+      <div className="flex flex-col items-center justify-center gap-x-16 md:flex-row">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="relative mb-10 w-11/12 md:mb-0 md:w-1/3"
+        >
+          <div className="bg-enviro-green-50 rounded-4xl py-8 md:px-4">
+            <div className="bg-enviro-gray-100 mx-6 pb-5 shadow-lg md:mx-5">
               <Image
                 src={eventPic1}
                 alt="Group Picture"
-                className="border-enviro-green-400 relative top-[2.5vh] left-[3vw] h-87 w-87 border object-cover object-center"
+                className="border-enviro-green-400 relative top-[2.5vh] left-[3vw] h-80 w-80 border object-cover object-center md:h-87 md:w-87"
               />
-              <div className="font-enviro-single-day pt-5 text-center text-5xl">
+              <div className="font-enviro-single-day pt-5 text-center text-3xl md:text-5xl">
                 Event Name
               </div>
-              <div className="font-enviro-single-day text-center text-3xl">
+              <div className="font-enviro-single-day text-center text-xl md:text-3xl">
                 Month Year
               </div>
             </div>
@@ -48,20 +56,26 @@ const PastEvents = () => {
             alt="Flower"
             className="absolute right-0 bottom-15 w-1/8 -translate-x-3"
           />
-        </div>
+        </motion.div>
 
-        <div className="relative w-1/3">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="relative w-11/12 md:w-1/3"
+        >
           <div className="bg-enviro-green-50 rounded-4xl pt-8 pb-8">
             <div className="bg-enviro-gray-100 mx-5 pb-10 shadow-lg">
               <Image
                 src={eventPic2}
                 alt="Group Picture"
-                className="border-enviro-green-400 relative top-2 scale-[0.93] border object-cover"
+                className="border-enviro-green-400 relative top-2 h-80 scale-[0.93] border object-cover md:h-auto"
               />
-              <div className="font-enviro-single-day text-center text-5xl">
+              <div className="font-enviro-single-day text-center text-3xl md:text-5xl">
                 Event Name
               </div>
-              <div className="font-enviro-single-day text-center text-3xl">
+              <div className="font-enviro-single-day text-center text-xl md:text-3xl">
                 Month Year
               </div>
             </div>
@@ -83,14 +97,14 @@ const PastEvents = () => {
             alt=""
             className="absolute bottom-15 left-0 w-1/8 translate-x-3"
           />
-        </div>
+        </motion.div>
       </div>
       <div className="w-1/5">
         <Button href="" textSize="text-3xl">
           See More
         </Button>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

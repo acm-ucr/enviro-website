@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import { Calendar as UICalendar } from "@/components/calendar/uicalendar";
 import UpcomingEvents from "@/components/UpcomingEvents";
 import { useQuery } from "@tanstack/react-query";
+import { motion } from "motion/react";
 
 export function useWindowWidth() {
   const [width, setWidth] = useState(
@@ -43,6 +44,7 @@ export type CalendarEvent = {
   resource: GoogleEventProps;
 };
 
+const MotionImage = motion(Image);
 const Calendar = () => {
   const [date, setDate] = React.useState<Date | undefined>(new Date());
 
@@ -80,11 +82,31 @@ const Calendar = () => {
   });
 
   return (
-    <div className="flex max-w-screen flex-col items-center bg-[url(/GrayBG.webp)]">
-      <Image
+    <motion.div
+      className="flex max-w-screen flex-col items-center bg-[url(/GrayBG.webp)]"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.6 }}
+    >
+      <MotionImage
         src={Earth}
         alt="Earth"
-        className="w-1/2 justify-self-center opacity-15 md:-mt-50"
+        className="w-1/2 justify-self-center md:-mt-50"
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{
+          opacity: 0.15,
+          scale: 1,
+          y: [0, -10, 0],
+        }}
+        transition={{
+          opacity: { duration: 1 },
+          scale: { duration: 1 },
+          y: {
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut",
+          },
+        }}
       />
       <div className="font-enviro-single-day py-5 text-4xl md:mt-5 md:py-20 md:text-7xl">
         Events
@@ -106,7 +128,7 @@ const Calendar = () => {
         ]}
       />
       <UpcomingEvents />
-    </div>
+    </motion.div>
   );
 };
 

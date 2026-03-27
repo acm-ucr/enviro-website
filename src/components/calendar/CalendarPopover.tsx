@@ -68,9 +68,9 @@ const CalendarEventPopover = ({
   return (
     <Dialog>
       <DialogTrigger
-        className={`border-enviro-green-200 bg-enviro-blue-100 text-enviro-gray-100 font-enviro-open-sans flex w-full cursor-pointer items-center border py-1 text-left hover:opacity-75`}
+        className={`border-enviro-green-200 bg-enviro-blue-100 text-enviro-gray-100 font-enviro-open-sans flex h-10 w-full cursor-pointer flex-col items-center border py-1 text-left hover:opacity-75 md:flex-row`}
       >
-        <span className="overflow-hidden px-1 text-xs text-ellipsis whitespace-nowrap">
+        <span className="overflow-hidden px-1 text-xs text-ellipsis md:whitespace-nowrap">
           {title}
         </span>
         <span className="pr-1 text-right text-xs">
