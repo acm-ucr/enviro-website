@@ -5,40 +5,37 @@ import Button from "../Button";
 
 const Title = () => {
   return (
-    <div className="relative h-screen w-full">
-      <div>
-        <Image
-          className="absolute -top-15 -z-1 w-full"
-          src={NotebookBackground}
-          alt="Notebook Background"
-        />
-      </div>
-      <div className="mx-auto w-6xl px-2">
-        <div className="p-l-5 grid grid-cols-1 items-center gap-10 md:grid-cols-2">
-          {/* LEFT */}
-          <div className="ml-5 pt-10">
-            <div className="font-enviro-single-day text-enviro-green-300 text-4xl whitespace-nowrap md:text-6xl">
+    <div className="w-full">
+      <Image
+        className="absolute inset-0 -top-10 -left-3 -z-1 origin-top-left scale-y-[1.20] object-fill sm:scale-y-[1.50] md:-top-15 md:-left-0 md:scale-100 lg:-top-6 xl:-top-15 xl:scale-y-[1.3]"
+        src={NotebookBackground}
+        alt="Notebook Background"
+        fill
+      />
+      <div className="mx-auto w-full px-2">
+        <div className="flex flex-col items-center justify-between text-center md:flex-row md:text-left">
+          <div className="mt-[7%] flex w-4/6 flex-col md:-mt-50 md:ml-[10%] md:w-3/6">
+            <div className="font-enviro-single-day text-enviro-green-300 text-3xl sm:text-6xl md:text-5xl md:whitespace-nowrap lg:text-6xl xl:text-7xl">
               Environmental Science Club
             </div>
 
-            <div className="font-enviro-open-sans text-1xl text-enviro-green-200 my-6 max-w-lg leading-relaxed font-semibold md:text-3xl">
+            <div className="font-enviro-open-sans text-enviro-green-200 max-w-lg text-sm leading-relaxed font-semibold sm:text-2xl md:text-xl lg:text-2xl xl:text-3xl">
               Informing, empowering, and mobilizing students to lead
               sustainability efforts at UC Riverside.
             </div>
-
-            <div className="mt-2 md:mt-10">
-              <Button width="w-1/2" text="text-3xl" children={"Contact Us"} />
-            </div>
           </div>
-
-          {/* RIGHT */}
-          <div className="flex w-full md:justify-end">
-            <Image
-              src={Logo}
-              alt="Environmental Science Club @ UCR Logo"
-              className="h-auto w-3/5 drop-shadow-md md:w-full"
-            />
-          </div>
+          <Image
+            src={Logo}
+            alt="Environmental Science Club @ UCR Logo"
+            className="w-3/5 object-contain drop-shadow-md md:-ml-[15%] md:w-full md:scale-60 lg:-ml-[5%] lg:scale-80"
+          />
+        </div>
+        <div className="z-10 -mt-10 w-full scale-50 md:absolute md:top-[62vh] md:left-[11vw] md:w-1/4 md:scale-100 lg:top-[65vh] lg:left-[10.5vw] lg:w-1/5 xl:top-[80vh] 2xl:top-[90vh]">
+          <Button
+            href="/contact"
+            children={"Contact Us"}
+            textSize="text-4xl md:text-2xl xl:text-4xl"
+          />
         </div>
       </div>
     </div>

@@ -12,7 +12,7 @@ const GetInvolved = () => {
 
   return (
     <div className="relative min-h-screen w-full">
-      <div className="bg-enviro-blue-100 absolute inset-0 -z-10 -mt-10 scale-x-[117.5%] opacity-31" />
+      <div className="bg-enviro-blue-100 absolute inset-0 -z-10 -mt-10 w-full opacity-31" />
       <div className="relative z-10 my-10 flex items-center justify-center text-white">
         <Subheading title="Get Involved" bg="bg-enviro-green-100" text="" />
       </div>
@@ -60,7 +60,7 @@ const GetInvolved = () => {
         <Image
           src={Hill}
           alt="Hill"
-          className="absolute right-0 bottom-3 left-0 z-0 h-auto w-full scale-x-[117.5%] scale-y-[115.5%]"
+          className="absolute right-0 bottom-3 left-0 z-0 h-auto w-full scale-y-[115.5%]"
         />
         <Image
           src={Grass}
