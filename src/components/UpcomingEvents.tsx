@@ -62,7 +62,7 @@ const UpcomingEvent = () => {
     },
   });
   return (
-    <div className="text-enviro-gray-100 flex w-full flex-col items-center justify-center gap-y-12 bg-[url(/GrayBG.webp)] pb-16">
+    <div className="text-enviro-gray-100 flex w-full flex-col items-center justify-center gap-y-12 pb-16">
       <Subheading title="Upcoming Events" bg="bg-enviro-green-100" text="" />
 
       <Cards
@@ -71,8 +71,11 @@ const UpcomingEvent = () => {
         isError={isError}
       />
 
-      <div className="w-3/12 pb-10">
-        <Button href="" textSize="text-3xl">
+      <div className="w-1/2 lg:w-3/12">
+        <Button
+          href=""
+          textSize="text-lg md:text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl"
+        >
           See More
         </Button>
       </div>

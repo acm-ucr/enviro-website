@@ -16,20 +16,20 @@ const PastEvents = () => {
         bg="bg-enviro-green-100"
         text="text-white"
       />
-      <div className="flex flex-col items-center justify-center gap-x-16 md:flex-row">
+      <div className="flex w-full flex-col items-center justify-center gap-x-16 px-[5%] md:flex-row">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="relative mb-10 w-11/12 md:mb-0 md:w-1/3"
+          className="relative mb-10 w-11/12 md:mb-0 md:w-1/2"
         >
           <div className="bg-enviro-green-50 rounded-4xl py-8 md:px-4">
-            <div className="bg-enviro-gray-100 mx-6 pb-5 shadow-lg md:mx-5">
+            <div className="bg-enviro-gray-100 mx-6 pb-10 shadow-lg md:mx-5">
               <Image
                 src={eventPic1}
                 alt="Group Picture"
-                className="border-enviro-green-400 relative top-[2.5vh] left-[3vw] h-80 w-80 border object-cover object-center md:h-87 md:w-87"
+                className="border-enviro-green-400 relative top-2 h-80 w-full scale-[0.93] border object-cover object-center lg:h-120"
               />
               <div className="font-enviro-single-day pt-5 text-center text-3xl md:text-5xl">
                 Event Name
@@ -63,16 +63,16 @@ const PastEvents = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="relative w-11/12 md:w-1/3"
+          className="relative w-11/12 md:w-1/2"
         >
           <div className="bg-enviro-green-50 rounded-4xl pt-8 pb-8">
             <div className="bg-enviro-gray-100 mx-5 pb-10 shadow-lg">
               <Image
                 src={eventPic2}
                 alt="Group Picture"
-                className="border-enviro-green-400 relative top-2 h-80 scale-[0.93] border object-cover md:h-auto"
+                className="border-enviro-green-400 relative top-2 h-80 scale-[0.93] border object-cover lg:h-120"
               />
-              <div className="font-enviro-single-day text-center text-3xl md:text-5xl">
+              <div className="font-enviro-single-day pt-5 text-center text-3xl md:text-5xl">
                 Event Name
               </div>
               <div className="font-enviro-single-day text-center text-xl md:text-3xl">
@@ -99,7 +99,7 @@ const PastEvents = () => {
           />
         </motion.div>
       </div>
-      <div className="w-1/5">
+      <div className="w-1/2 md:w-1/5">
         <Button href="" textSize="text-3xl">
           See More
         </Button>
