@@ -42,7 +42,7 @@ function Calendar({ className, classNames, events, ...props }: CalendarProps) {
   };
 
   return (
-    <div className="mb-10 h-full w-11/12 justify-center md:w-2/3">
+    <div className="mb-10 h-full w-11/12 justify-center lg:w-2/3">
       <CalendarTop
         currentDate={currentDate}
         onPrevMonth={prevMonth}
