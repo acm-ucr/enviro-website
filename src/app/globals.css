@@ -21,8 +21,9 @@ body {
   background-image: url("/GrayBG.webp");
 }
 
-@layer utilities {
-  .scrollbar-hidden::-webkit-scrollbar {
-    display: none;
-  }
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+  touch-action: pan-y;
 }

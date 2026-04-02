@@ -66,7 +66,7 @@ const Cards = ({ events, isLoading, isError }: EventProps) => {
   //     );
   return (
     <motion.div
-      className="mx-auto mb-10 grid w-11/12 gap-y-15 md:w-7/12"
+      className="mx-auto mb-10 grid w-11/12 gap-y-15 md:w-9/12"
       variants={{
         hidden: { opacity: 0, y: -20 },
         show: {
@@ -95,7 +95,14 @@ const Cards = ({ events, isLoading, isError }: EventProps) => {
         });
 
         return (
-          <motion.div key={index} variants={childVariant}>
+          <motion.div
+            key={index}
+            variants={childVariant}
+            className={[
+              index >= 1 ? "hidden sm:block" : "",
+              index >= 2 ? "sm:hidden md:block" : "",
+            ].join(" ")}
+          >
             <EventCard
               eventName={event.summary}
               month={month}
