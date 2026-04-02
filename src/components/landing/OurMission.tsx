@@ -14,12 +14,12 @@ const OurMission = () => {
       <Image
         src={Gradient}
         alt="Gradient Background"
-        className="z-0 col-start-1 row-start-1 h-10/12 w-full -mt-8 sm:-mt-10 2xl:w-screen"
+        className="z-0 col-start-1 row-start-1 -mt-8 h-10/12 w-full sm:-mt-10 2xl:w-screen"
       />
       {/* Content */}
       <div className="z-10 col-start-1 row-start-1 flex flex-col items-center justify-around md:absolute md:mt-[5%] md:mb-[10%] md:flex-row">
         {/* Left side */}
-        <div className="relative sm:mt-15 w-full md:w-1/2">
+        <div className="relative w-full sm:mt-15 md:w-1/2">
           <div className="bg-enviro-gray-100 mx-5 pb-10 shadow-lg">
             <Image
               src={MissionStatement}
@@ -52,7 +52,10 @@ const OurMission = () => {
             involvement.
           </div>
           <div className="w-5/12 sm:w-1/3 md:w-1/2 xl:w-5/12">
-            <Button href="" textSize="text-lg lg:text-2xl xl:text-2xl 2xl:text-3xl">
+            <Button
+              href=""
+              textSize="text-lg lg:text-2xl xl:text-2xl 2xl:text-3xl"
+            >
               Learn More
             </Button>
           </div>
@@ -61,7 +64,7 @@ const OurMission = () => {
       <Image
         src={Jagged}
         alt="Jagged Edge"
-        className="z-0 col-start-1 row-start-1 mt-130 hidden w-full md:mt-115 md:block 2xl:mt-150 scale-y-130"
+        className="z-0 col-start-1 row-start-1 mt-130 hidden w-full scale-y-130 md:mt-115 md:block 2xl:mt-150"
       />
       <Image
         src={JaggedMobile}

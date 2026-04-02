@@ -12,13 +12,13 @@ const GetInvolved = () => {
 
   return (
     <div className="relative w-full">
-      <div className="bg-enviro-blue-100 absolute inset-0 -z-10 w-full opacity-31 -mt-[8%]" />
+      <div className="bg-enviro-blue-100 absolute inset-0 -z-10 -mt-[8%] w-full opacity-31" />
       <div className="relative z-10 my-[8%] flex items-center justify-center text-white">
         <Subheading title="Get Involved" bg="bg-enviro-green-100" text="" />
       </div>
 
       <div className="grid w-screen">
-        <div className="flex col-start-1 row-start-1 items-center justify-between gap-x-[3%] w-screen px-[5%]">
+        <div className="col-start-1 row-start-1 flex w-screen items-center justify-between gap-x-[3%] px-[5%]">
           <div className="z-10 grid items-center justify-center">
             <Image
               src={GreenFlower}
@@ -45,7 +45,7 @@ const GetInvolved = () => {
             </div>
           </div>
 
-          <div className="z-10 grid items-center justify-center ">
+          <div className="z-10 grid items-center justify-center">
             <Image
               src={GreenFlower}
               alt="Flower"
@@ -59,28 +59,15 @@ const GetInvolved = () => {
           </div>
         </div>
 
-        
-        <div className="flex flex-row mt-auto z-10 w-full col-start-1 row-start-1">
-          <Image
-            src={Grass}
-            alt="Grass"
-            className="ml-[30%] mb-[5%] w-1/12"
-          />
-          <Image
-            src={Grass}
-            alt="Grass"
-            className=" ml-[18%] -mb-[8%] w-1/12"
-          />
-          <Image
-            src={Grass}
-            alt="Grass"
-            className="ml-[2%] mb-[12%] w-1/12"
-          />
+        <div className="z-10 col-start-1 row-start-1 mt-auto flex w-full flex-row">
+          <Image src={Grass} alt="Grass" className="mb-[5%] ml-[30%] w-1/12" />
+          <Image src={Grass} alt="Grass" className="-mb-[8%] ml-[18%] w-1/12" />
+          <Image src={Grass} alt="Grass" className="mb-[12%] ml-[2%] w-1/12" />
         </div>
         <Image
           src={Hill}
           alt="Hill"
-          className="absolute bottom-0 z-0 w-full -mb-2"
+          className="absolute bottom-0 z-0 -mb-2 w-full"
         />
       </div>
     </div>

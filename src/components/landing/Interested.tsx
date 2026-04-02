@@ -9,7 +9,7 @@ import RippedPaperBlueMobile from "@/public/Home/RippedPaperBlueMobile.webp";
 
 const Interested = () => {
   return (
-    <div className="relative grid w-full -mb-[5%]">
+    <div className="relative -mb-[5%] grid w-full">
       <Image
         src={RippedPaperBlue}
         alt="Ripped Paper Background"
@@ -38,7 +38,10 @@ const Interested = () => {
             climate resilience initiatives!
           </p>
           <div className="mx-auto w-2/3 md:mx-0">
-            <Button href="" textSize="text-lg md:text-2xl lg:text-4xl xl:text-5xl">
+            <Button
+              href=""
+              textSize="text-lg md:text-2xl lg:text-4xl xl:text-5xl"
+            >
               Join Here
             </Button>
           </div>

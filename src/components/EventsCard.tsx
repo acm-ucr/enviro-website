@@ -27,11 +27,13 @@ const EventCard = ({
         <div className="bg-enviro-gray-100 border-enviro-green-300 flex w-full flex-col justify-center rounded-xl border-1 text-center text-2xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
           <p>{month}</p>
           <p>{day}</p>
-          <p className="pt-3 text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl">{time}</p>
+          <p className="pt-3 text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl">
+            {time}
+          </p>
         </div>
       </div>
       <div className="bg-enviro-gray-100 border-enviro-green-300 relative flex w-3/4 flex-col gap-y-2 border-t-1 border-r-1">
-        <div className="bg-enviro-green-200 text-enviro-green-50 mt-3 ml-[6%] w-fit rounded-3xl py-1 px-5 lg:px-7 text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl">
+        <div className="bg-enviro-green-200 text-enviro-green-50 mt-3 ml-[6%] w-fit rounded-3xl px-5 py-1 text-xl md:text-2xl lg:px-7 lg:text-3xl xl:text-4xl 2xl:text-5xl">
           {eventName}
         </div>
         <p className="ml-[8%] text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl">

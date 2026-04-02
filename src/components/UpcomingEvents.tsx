@@ -72,7 +72,10 @@ const UpcomingEvent = () => {
       />
 
       <div className="w-1/2 lg:w-3/12">
-        <Button href="" textSize="text-lg md:text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl">
+        <Button
+          href=""
+          textSize="text-lg md:text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl"
+        >
           See More
         </Button>
       </div>
