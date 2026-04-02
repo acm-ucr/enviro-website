@@ -6,7 +6,6 @@ const Events = () => {
   return (
     <div>
       <Calendar />
-
       <PastEvents />
     </div>
   );
