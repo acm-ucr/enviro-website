@@ -1,7 +1,7 @@
 "use client";
 import Polaroid from "./Polaroid";
 import Image from "next/image";
-import Rip from "@/public/Ripped (1).png";
+import Rip from "@/public/webp (1).webp";
 import About1 from "@/public/About/About1.webp";
 import About2 from "@/public/About/About2.webp";
 import About3 from "@/public/About/About3.webp";
