@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "motion/react";
 interface SubheadingProps {
   title: string;
   bg: string;
@@ -6,7 +8,11 @@ interface SubheadingProps {
 
 const Subheading = ({ title, bg, text }: SubheadingProps) => {
   return (
-    <div
+    <motion.div
+      initial={{ y: -20, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
       className={`${bg} border-enviro-green-300 w-2/3 rounded-2xl border-1 py-2 md:rounded-4xl md:py-4 lg:w-1/2`}
     >
       <div
@@ -14,7 +20,7 @@ const Subheading = ({ title, bg, text }: SubheadingProps) => {
       >
         {title}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
