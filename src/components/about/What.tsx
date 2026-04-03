@@ -15,7 +15,7 @@ const What = () => {
         variants={TitleAnimation}
         initial="initial"
         whileInView="whileInView"
-        className="bg-enviro-blue-100 font-enviro-single-day border-enviro-green-200 mt-14 flex w-3/5 items-center justify-center rounded-full border text-3xl md:mt-22 md:py-4 md:text-6xl lg:w-4/12"
+        className="bg-enviro-blue-100 font-enviro-single-day border-enviro-green-200 mt-14 flex w-3/5 items-center justify-center rounded-full border text-3xl md:mt-22 md:py-4 md:text-6xl lg:w-5/12"
       >
         What Do We Do?
       </motion.div>
@@ -29,7 +29,7 @@ const What = () => {
         <Image
           src={Leaf}
           alt="Leaf"
-          className="absolute -top-28 -left-3 z-0 w-32 scale-x-[-1] md:-top-64 md:-left-5 md:w-48 lg:-top-96 lg:w-60"
+          className="absolute -top-28 -left-2 z-0 w-32 scale-x-[-1] sm:-top-45 md:-top-64 md:-left-5 md:w-48 lg:-top-96 lg:w-60"
         />
 
         <div className="bg-enviro-blue-100 relative z-1 mb-10 flex justify-center overflow-hidden py-3 shadow-[0_-6px_2px_rgba(0,0,0,0.3)] md:py-8">
@@ -52,7 +52,7 @@ const What = () => {
         variants={TitleAnimation}
         initial="initial"
         whileInView="whileInView"
-        className="bg-enviro-green-100 font-enviro-single-day border-enviro-green-200 -mt-6 mb-5 flex w-9/10 items-center justify-center rounded-full border py-4 text-center text-3xl text-white md:text-6xl lg:w-8/12"
+        className="bg-enviro-green-100 font-enviro-single-day border-enviro-green-200 -mt-6 mb-5 flex w-9/10 items-center justify-center rounded-full border py-4 text-center text-3xl text-white sm:p-4 md:text-6xl lg:w-8/12"
       >
         What if I'm not an environmental science major? Can I still join?
       </motion.div>
@@ -67,7 +67,7 @@ const What = () => {
         <Image
           src={Leaf}
           alt="Leaf"
-          className="absolute -top-32 -right-3 z-2 w-32 scale-[0.9] md:-top-56 md:-right-10 md:w-48 lg:-top-96 lg:w-60"
+          className="absolute -top-32 -right-3 z-2 w-32 scale-[0.9] md:-top-50 md:-right-8 md:w-48 lg:-top-96 lg:w-60"
         />
 
         <div className="bg-enviro-green-200 relative z-3 flex justify-center overflow-hidden py-3 shadow-[0_-6px_2px_rgba(0,0,0,0.3)] md:py-8">
@@ -88,7 +88,7 @@ const What = () => {
           whileInView={{ scale: 1, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4 }}
-          className="bg-enviro-green-100 absolute -top-12 -left-3 z-4 flex w-2/5 -rotate-5 items-center justify-center py-2 shadow-[0_-6px_2px_rgba(0,0,0,0.3)] md:-left-8 lg:w-1/4"
+          className="bg-enviro-green-100 absolute -top-12 -left-3 z-4 flex w-2/5 -rotate-5 items-center justify-center py-2 shadow-[0_-6px_2px_rgba(0,0,0,0.3)] md:-left-3 lg:w-1/3 xl:w-1/4 2xl:w-1/5"
         >
           <div className="bg-enviro-gray-100 flex w-11/12 justify-center py-2">
             <div className="border-enviro-green-100 text-enviro-green-100 flex w-11/12 justify-center border-3 border-dashed p-1 text-center text-sm font-semibold md:py-4 md:text-3xl">

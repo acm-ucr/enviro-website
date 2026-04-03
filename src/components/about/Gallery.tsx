@@ -15,7 +15,7 @@ const Gallery = () => {
       <Image
         src={Rip}
         alt="Paper Rip"
-        className="absolute -top-6 w-full rotate-180 object-fill lg:-top-15"
+        className="absolute -top-6 w-full rotate-180 object-fill md:-top-8 lg:-top-15"
       />
       <div className="flex flex-col items-center justify-center gap-10 md:flex-row md:px-10 lg:px-5">
         {images.map((img, index) => (

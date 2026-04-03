@@ -7,7 +7,7 @@ import { motion } from "motion/react";
 
 const OurMission = () => {
   return (
-    <div className="relative flex h-60 w-full flex-col items-center justify-center gap-2 text-white md:min-h-100 md:gap-4">
+    <div className="relative flex h-60 w-full flex-col items-center justify-center gap-2 text-white sm:my-16 md:-my-8 md:min-h-100 md:gap-4">
       <Image
         src={MissionBG}
         alt="Mission Background"
@@ -43,7 +43,7 @@ const OurMission = () => {
       <Image
         src={GreenBottom}
         alt="Background Bottom"
-        className="absolute -bottom-6 -z-20 w-full md:-bottom-14"
+        className="absolute -bottom-5 -z-20 w-full md:-bottom-10"
       />
     </div>
   );

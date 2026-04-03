@@ -8,12 +8,12 @@ interface PolaroidProp {
 
 const Polaroid = ({ picture }: PolaroidProp) => {
   return (
-    <div className="h-96 w-80 justify-center md:h-64 md:w-96 lg:h-96">
+    <div className="h-96 w-80 justify-center md:h-70 md:w-55 lg:h-96 lg:w-75 xl:w-96">
       <div className="bg-enviro-gray-100 border-enviro-green-200 relative h-full border-2 p-4 pb-15 shadow-[2px_4px_0px_rgba(0,0,0,0.3)]">
         <Image
           src={Tape}
           alt="tape"
-          className="absolute -top-4 left-1/2 -translate-x-1/2 object-cover opacity-85"
+          className="absolute -top-4 left-1/2 w-3/4 -translate-x-1/2 object-cover opacity-85"
         />
         <Image
           src={picture}
