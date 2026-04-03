@@ -83,7 +83,7 @@ const Calendar = () => {
 
   return (
     <motion.div
-      className="flex max-w-screen flex-col items-center bg-[url(/GrayBG.webp)]"
+      className="flex max-w-screen flex-col items-center"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
@@ -91,7 +91,7 @@ const Calendar = () => {
       <MotionImage
         src={Earth}
         alt="Earth"
-        className="w-1/2 justify-self-center md:-mt-50"
+        className="-z-10 w-1/2 justify-self-center md:-mt-[25%]"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{
           opacity: 0.15,
@@ -108,7 +108,7 @@ const Calendar = () => {
           },
         }}
       />
-      <div className="font-enviro-single-day py-5 text-4xl md:mt-5 md:py-20 md:text-7xl">
+      <div className="font-enviro-single-day py-5 text-4xl md:mt-5 md:py-20 md:text-7xl lg:text-8xl xl:text-9xl">
         Events
       </div>
       <UICalendar
