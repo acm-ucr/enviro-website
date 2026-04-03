@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import EventCard from "@/components/EventsCard";
+import EventCard from "@/components/events/EventsCard";
 import { motion } from "motion/react";
 import type { DayPicker } from "react-day-picker";
 import { GoogleEventProps } from "@/components/calendar/Calendar";

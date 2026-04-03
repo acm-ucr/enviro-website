@@ -12,17 +12,17 @@ const HighlanderLink = () => {
         alt="grid"
         className="absolute inset-0 -z-10 h-full object-cover"
       />
-      <div className="font-enviro-single-day text-enviro-green-200 pt-7 text-center text-5xl md:text-left md:text-6xl">
+      <div className="font-enviro-single-day text-enviro-green-200 pt-7 text-center text-5xl sm:w-2/3 md:text-left md:text-6xl">
         We’re also on HighlanderLink!
       </div>
 
-      <div className="flex w-2/3 md:ml-10 md:justify-end">
+      <div className="flex w-1/2 md:ml-10 md:w-2/3 md:justify-end">
         <div className="hidden md:block">
           <Image src={arrow} alt="arrow" className="w-2/3 object-cover" />
         </div>
 
         <div className="mt-auto w-full md:mt-15 md:w-1/2">
-          <Button href="" textSize="text-3xl">
+          <Button href="" textSize="text-lg sm:text-xl md:text-3xl">
             Click Here
           </Button>
         </div>
