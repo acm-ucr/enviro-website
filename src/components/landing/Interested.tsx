@@ -4,7 +4,7 @@ import Join2 from "@/public/Home/Join2.webp";
 import Tape from "@/public/tape.webp";
 import Button from "@/components/Button";
 import SquigglyLine2 from "@/public/Home/SquigglyLine2.webp";
-import webpPaperBlue from "@/public/RippedPaperBlue.webp";
+import webpPaperBlue from "@/public/webpPaperBlue.webp";
 
 const Interested = () => {
   return (
