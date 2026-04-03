@@ -27,14 +27,14 @@ const Title = () => {
           <Image
             src={Logo}
             alt="Environmental Science Club @ UCR Logo"
-            className="w-3/5 object-contain drop-shadow-md md:-ml-[10%] md:w-full md:scale-60 lg:-ml-[5%] lg:scale-80"
+            className="w-3/5 object-contain drop-shadow-md md:mt-[2%] md:-ml-[10%] md:w-full md:scale-60 lg:mt-[5%] lg:-ml-[5%] lg:scale-80"
           />
         </div>
-        <div className="z-10 mx-auto mb-[9%] w-5/12 md:-mt-[15%] md:ml-[15%] md:w-1/5">
+        <div className="z-10 mx-auto mb-[10%] w-5/12 md:-mt-[20%] md:ml-[15%] md:w-1/4 lg:w-1/5">
           <Button
             href="/contact"
             children={"Contact Us"}
-            textSize="text-2xl text-2xl xl:text-4xl"
+            textSize="text-2xl xl:text-4xl"
           />
         </div>
       </div>

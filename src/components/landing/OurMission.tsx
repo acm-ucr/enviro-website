@@ -44,17 +44,17 @@ const OurMission = () => {
             alt="Squiggly Line"
             className="pointer-events-none w-9/12 pb-5 sm:pb-2 md:w-full"
           />
-          <div className="text-md w-10/12 pb-5 sm:pb-2 sm:text-lg md:w-full lg:text-xl xl:text-2xl 2xl:text-3xl">
+          <div className="text-md w-10/12 pb-5 sm:pb-2 sm:text-lg md:w-full lg:text-2xl xl:text-3xl 2xl:text-4xl">
             We are the Environmental Science Club, a vibrant community of
             students committed to understanding and protecting the environment.
             Our mission is to raise global awareness about ecological issues and
             inspire action through education, advocacy, and hands-on
             involvement.
           </div>
-          <div className="w-5/12 sm:w-1/3 md:w-1/2 xl:w-5/12">
+          <div className="w-5/12 sm:w-1/3 md:w-2/3 lg:w-1/2 xl:w-1/2 2xl:w-1/2">
             <Button
               href=""
-              textSize="text-lg lg:text-2xl xl:text-2xl 2xl:text-3xl"
+              textSize="text-lg md:text-2xl xl:text-3xl 2xl:text-4xl"
             >
               Learn More
             </Button>
@@ -64,7 +64,7 @@ const OurMission = () => {
       <Image
         src={Jagged}
         alt="Jagged Edge"
-        className="z-0 col-start-1 row-start-1 mt-130 hidden w-full scale-y-130 md:mt-115 md:block 2xl:mt-150"
+        className="z-0 col-start-1 row-start-1 mt-130 hidden w-full scale-y-130 md:mt-[52%] md:block 2xl:mt-150"
       />
       <Image
         src={JaggedMobile}
@@ -74,7 +74,7 @@ const OurMission = () => {
       <Image
         src={Flower}
         alt="Green Flower"
-        className="absolute right-[46%] bottom-[3vh] z-20 scale-35 sm:bottom-[25vh] sm:-left-[25%] sm:scale-45 md:-bottom-[4vh] md:-left-[20%] lg:bottom-[5vh] lg:-left-[13vw] lg:scale-70 xl:bottom-[12vh] xl:scale-90 2xl:top-[65vh] 2xl:-left-[10vw] 2xl:scale-100"
+        className="absolute right-[46%] bottom-[3vh] z-20 scale-35 sm:bottom-[25vh] sm:-left-[25%] sm:scale-45 md:-bottom-[4vh] md:-left-[20%] lg:bottom-[5vh] lg:-left-[13vw] lg:scale-70 xl:bottom-[12vh] xl:scale-90 2xl:top-[45vh] 2xl:-left-[10vw] 2xl:scale-100"
       />
     </div>
   );
