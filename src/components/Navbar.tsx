@@ -93,7 +93,7 @@ const Navbar = () => {
             alt="Environmental Science Club Logo"
           />
 
-          <div className="ml-auto flex items-center justify-end gap-10 text-lg md:text-3xl lg:gap-15 lg:text-5xl">
+          <div className="ml-auto flex items-center justify-end gap-10 text-lg md:text-3xl lg:gap-10 lg:text-5xl">
             {navigations.map(({ link, name }, index) => (
               <motion.div
                 key={index}
