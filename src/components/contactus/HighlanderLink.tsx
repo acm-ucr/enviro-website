@@ -35,8 +35,8 @@ const HighlanderLink = () => {
           <Image src={arrow} alt="arrow" className="w-2/3 object-cover" />
         </motion.div>
 
-        <div className="z-30 mt-auto w-full md:mt-15 md:w-2/5">
-          <Button href="/" textSize="text-lg sm:text-xl md:text-4xl">
+        <div className="z-30 mt-auto w-full md:mt-15 md:w-3/5 lg:w-1/2 xl:w-1/3">
+          <Button href="/" textSize="text-lg sm:text-3xl md:text-4xl">
             Click Here
           </Button>
         </div>
