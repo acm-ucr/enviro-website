@@ -1,7 +1,5 @@
-import Image from "next/image";
 import Grid from "@/components/board/Grid";
 import boardInfo from "@/data/BoardInfo";
-import BoardBG from "@/public/Board/BoardBackground.webp";
 
 const Board = () => {
   const firstRow = boardInfo.slice(0, 2);
