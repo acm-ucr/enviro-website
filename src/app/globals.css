@@ -19,6 +19,7 @@
 body {
   font-family: var(--font-enviro-open-sans);
   background-image: url("/GrayBG.webp");
+  background-attachment: fixed;
 }
 
 html,

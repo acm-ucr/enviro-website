@@ -91,7 +91,7 @@ const Calendar = () => {
       <MotionImage
         src={Earth}
         alt="Earth"
-        className="-z-10 w-1/2 justify-self-center md:-mt-[25%]"
+        className="-z-10 -mt-[25%] w-1/2 justify-self-center"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{
           opacity: 0.15,

@@ -4,14 +4,14 @@ import line from "@/public/ContactUs/contactheader.svg";
 
 const Title = () => {
   return (
-    <div className="relative flex min-h-[50vh] w-full flex-col items-center justify-center md:min-h-screen">
+    <div className="relative -mt-15 flex min-h-[50vh] w-full flex-col items-center justify-center md:min-h-screen">
       <Image
         src={grid}
         alt="grid"
         className="absolute -z-10 h-full object-cover"
       />
 
-      <div className="font-enviro-single-day text-enviro-green-300 mt-5 text-center text-5xl md:mt-0 md:text-9xl">
+      <div className="font-enviro-single-day text-enviro-green-300 text-center text-5xl md:text-9xl">
         Contact Us
       </div>
 
