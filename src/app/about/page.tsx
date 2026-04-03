@@ -5,12 +5,12 @@ import Gallery from "@/components/about/Gallery";
 
 const About = () => {
   return (
-    <div>
+    <>
       <Title />
       <OurMission />
       <What />
       <Gallery />
-    </div>
+    </>
   );
 };
 

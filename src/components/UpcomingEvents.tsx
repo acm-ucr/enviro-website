@@ -3,7 +3,7 @@ import React from "react";
 import { useQuery } from "@tanstack/react-query";
 import Subheading from "@/components/Subheading";
 import Button from "@/components/Button";
-import Cards from "@/components/Cards";
+import Cards from "@/components/events/Cards";
 
 export type GoogleEventProps = {
   start: {
@@ -75,7 +75,7 @@ const UpcomingEvent = () => {
         isError={isError}
       />
 
-      <div className="w-1/2 sm:w-1/3 md:w-[30%] lg:w-3/12">
+      <div className="w-1/2 pb-10 sm:w-1/3 md:w-[30%] lg:w-3/12">
         <Button
           href=""
           textSize="text-lg sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl"
