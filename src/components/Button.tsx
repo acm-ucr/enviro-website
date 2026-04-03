@@ -15,7 +15,9 @@ const Button = ({ children, href, textSize }: ButtonProps) => {
   return (
     <Link href={href}>
       <motion.div
-        initial={{ scale: 1 }}
+        initial={{ opacity: 0, scale: 1 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
         whileTap={{ scale: 0.9 }}
         className={`bg-enviro-green-50 mx-auto px-2 py-2 shadow-md`}
       >

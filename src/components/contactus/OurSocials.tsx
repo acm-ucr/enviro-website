@@ -1,6 +1,8 @@
+"use client";
 import Subheading from "../Subheading";
 import SocialCard from "./SocialCard";
 import socialslinks from "./SocialsLink";
+import { motion } from "motion/react";
 
 const OurSocials = () => {
   return (
@@ -14,13 +16,20 @@ const OurSocials = () => {
 
         <div className="flex flex-wrap justify-center gap-6">
           {socialslinks.map((socialslinks, index) => (
-            <SocialCard
+            <motion.div
               key={index}
-              name={socialslinks.name}
-              link={socialslinks.link}
-              at={socialslinks.at}
-              Icon={socialslinks.Icon}
-            />
+              initial={{ opacity: 0, y: -25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.3 }}
+            >
+              <SocialCard
+                key={index}
+                name={socialslinks.name}
+                link={socialslinks.link}
+                at={socialslinks.at}
+                Icon={socialslinks.Icon}
+              />
+            </motion.div>
           ))}
         </div>
       </div>
