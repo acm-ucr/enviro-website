@@ -5,21 +5,21 @@ import Join2 from "@/public/Home/Join2.webp";
 import Tape from "@/public/tape.webp";
 import Button from "@/components/Button";
 import SquigglyLine2 from "@/public/Home/SquigglyLine2.webp";
-import RippedPaperBlue from "@/public/Home/RippedPaperBlue.webp";
-import RippedPaperBlueMobile from "@/public/Home/RippedPaperBlueMobile.webp";
+import webpPaperBlue from "@/public/Home/webpPaperBlue.webp";
+import webpPaperBlueMobile from "@/public/Home/webpPaperBlueMobile.webp";
 import { motion } from "motion/react";
 
 const Interested = () => {
   return (
     <div className="relative -mb-[5%] grid w-full">
       <Image
-        src={RippedPaperBlue}
-        alt="Ripped Paper Background"
+        src={webpPaperBlue}
+        alt="webp Paper Background"
         className="z-0 col-start-1 row-start-1 -mb-5 hidden w-full md:block"
       />
       <Image
-        src={RippedPaperBlueMobile}
-        alt="Ripped Paper Background"
+        src={webpPaperBlueMobile}
+        alt="webp Paper Background"
         className="z-0 col-start-1 row-start-1 block w-full md:hidden"
       />
       <div className="z-10 col-start-1 row-start-1 mx-auto mt-50 flex w-11/12 flex-col md:mx-0 md:mt-[22%] md:w-full md:flex-row">
