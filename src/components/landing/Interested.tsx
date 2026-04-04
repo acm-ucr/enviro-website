@@ -53,8 +53,9 @@ const Interested = () => {
           </motion.div>
           <div className="mx-auto w-1/2 sm:w-1/3 md:mx-0 md:w-2/3 lg:w-1/2">
             <Button
-              href=""
+              href="https://docs.google.com/forms/d/e/1FAIpQLScnYHNoa4pa0s5yVql0kcG-fArjlcO6HD8zDGmJk0Ju16EH7g/viewform"
               textSize="text-lg md:text-2xl lg:text-3xl xl:text-4xl"
+              target="_blank"
             >
               Join Here
             </Button>

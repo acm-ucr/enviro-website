@@ -36,7 +36,10 @@ const HighlanderLink = () => {
         </motion.div>
 
         <div className="z-30 mt-auto w-full md:mt-15 md:w-3/5 lg:w-1/2 xl:w-1/3">
-          <Button href="/" textSize="text-lg sm:text-3xl md:text-4xl">
+          <Button
+            href="https://highlanderlink.ucr.edu/organization/enscclub"
+            textSize="text-lg sm:text-3xl md:text-4xl"
+          >
             Click Here
           </Button>
         </div>

@@ -87,7 +87,7 @@ const OurMission = () => {
           </motion.div>
           <div className="w-5/12 sm:w-1/3 md:w-2/3 lg:w-1/2 xl:w-1/2 2xl:w-1/2">
             <Button
-              href=""
+              href="/about"
               textSize="text-lg md:text-2xl xl:text-3xl 2xl:text-4xl"
             >
               Learn More
