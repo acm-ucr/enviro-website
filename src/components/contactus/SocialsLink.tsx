@@ -13,19 +13,19 @@ export interface socialslink {
 const socialslinks: socialslink[] = [
   {
     name: "Instagram",
-    link: "/",
+    link: "https://www.instagram.com/enscclub_ucr?igsh=NTc4MTIwNjQ2YQ%3D%3D",
     at: "@enscclub_ucr",
     Icon: FiInstagram,
   },
   {
     name: "Email",
-    link: "/",
+    link: "mailto:enscclubatucr@gmail.com",
     at: "enscclubatucr@gmail.com",
     Icon: FiMail,
   },
   {
     name: "Linktree",
-    link: "/",
+    link: "https://linktr.ee/enscclub_ucr?utm_source=linktree_profile_share&ltsid=00a8f664-c172-4f90-a4e8-e05aaaa6731e",
     at: "@enscclub_ucr",
     Icon: SiLinktree,
   },

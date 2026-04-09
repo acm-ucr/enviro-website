@@ -1,6 +1,5 @@
 "use client";
 import Subheading from "@/components/Subheading";
-import Button from "@/components/Button";
 import Tape from "@/public/tape.webp";
 import eventPic1 from "@/public/Events/Event1.webp";
 import eventPic2 from "@/public/Events/Event2.webp";
@@ -98,11 +97,6 @@ const PastEvents = () => {
             className="absolute bottom-15 left-0 w-1/8 translate-x-3"
           />
         </motion.div>
-      </div>
-      <div className="w-1/2 md:w-1/5">
-        <Button href="" textSize="text-3xl">
-          See More
-        </Button>
       </div>
     </motion.div>
   );
