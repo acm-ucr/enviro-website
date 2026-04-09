@@ -26,9 +26,9 @@ const GetInvolved = () => {
               className="col-start-1 row-start-1 translate-y-[4.7%] sm:translate-y-[3%] lg:translate-y-[5%]"
             />
             <div className="col-start-1 row-start-1 mb-[40%] flex items-center justify-center">
-              <Link href={flower0.link} target="_blank">
+              <a href={flower0.link} target="_blank" rel="noopener noreferrer">
                 <flower0.Icon className="translate-y-0 text-2xl text-white sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl" />
-              </Link>
+              </a>
             </div>
           </div>
 

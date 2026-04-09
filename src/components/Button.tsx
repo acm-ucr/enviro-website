@@ -9,11 +9,12 @@ interface ButtonProps {
   children: ReactNode;
   href: string;
   textSize?: string;
+  target?: React.HTMLAttributeAnchorTarget;
 }
 
-const Button = ({ children, href, textSize }: ButtonProps) => {
+const Button = ({ children, href, textSize, target }: ButtonProps) => {
   return (
-    <Link href={href}>
+    <Link href={href} target={target}>
       <motion.div
         initial={{ opacity: 0, scale: 1 }}
         whileInView={{ opacity: 1 }}
