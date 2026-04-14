@@ -116,16 +116,7 @@ const Calendar = () => {
         selected={date}
         onSelect={setDate}
         className="w-full"
-        events={[
-          ...(data?.allEvents ?? []),
-          {
-            summary: "Test Event",
-            start: { dateTime: new Date().toISOString() },
-            end: { dateTime: new Date(Date.now() + 3600000).toISOString() },
-            location: "Room 302",
-            description: "Testing testing 123.",
-          },
-        ]}
+        events={data?.allEvents ?? []}
       />
       <UpcomingEvents />
     </motion.div>

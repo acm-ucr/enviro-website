@@ -77,7 +77,7 @@ function Calendar({ className, classNames, events, ...props }: CalendarProps) {
 
             nav: "hidden",
 
-            day: "border border-width-2 border-enviro-green-100 bg-enviro-gray-100 h-15 md:h-35 flex justify-end font-enviro-open-sans text-xl md:text-4xl",
+            day: "border border-width-2 border-enviro-green-100 bg-enviro-gray-100 h-20 md:h-35 flex justify-end font-enviro-open-sans text-xl md:text-4xl",
             range_end: "",
             selected: "",
             outside: "text-gray-500",

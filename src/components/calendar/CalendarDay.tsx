@@ -48,9 +48,13 @@ const CalendarDay = ({ date, displayMonth, events }: DayProps) => {
 
   useEffect(() => {
     const update = () => {
-      if (window.innerHeight > 1400) setVisibleEventCount(4);
-      else if (window.innerHeight > 1000) setVisibleEventCount(3);
-      else setVisibleEventCount(2);
+      if (window.innerWidth < 640) {
+        setVisibleEventCount(1);
+      } else if (window.innerWidth < 1024) {
+        setVisibleEventCount(2);
+      } else {
+        setVisibleEventCount(3);
+      }
     };
 
     update();
@@ -58,17 +62,14 @@ const CalendarDay = ({ date, displayMonth, events }: DayProps) => {
     return () => window.removeEventListener("resize", update);
   }, []);
 
-  const displayCount =
-    filteredEvents.length > visibleEventCount
-      ? visibleEventCount - 1
-      : visibleEventCount;
+  const displayCount = visibleEventCount;
 
   return (
     <div
       className={`relative h-full w-full ${isOutsideMonth ? "opacity-40" : ""}`}
     >
       <div
-        className={`font-enviro-open-sans absolute top-1.5 right-1.5 text-lg md:text-3xl ${
+        className={`font-enviro-open-sans top-1.0 absolute right-1.5 text-base md:top-1.5 md:text-3xl ${
           isToday
             ? "bg-enviro-green-100 flex h-6 w-6 items-center justify-center rounded-full text-white md:h-12 md:w-12"
             : "text-enviro-200"
@@ -78,7 +79,7 @@ const CalendarDay = ({ date, displayMonth, events }: DayProps) => {
       </div>
 
       <div
-        className={`mt-3 flex flex-col gap-1 px-1 md:mt-15 ${
+        className={`mt-5 flex flex-col gap-1 px-1 md:mt-12 ${
           isPastDay ? "text-gray-400" : ""
         }`}
       >
@@ -96,7 +97,7 @@ const CalendarDay = ({ date, displayMonth, events }: DayProps) => {
 
         {filteredEvents.length > visibleEventCount && (
           <Popover>
-            <PopoverTrigger className="hover:opacity-70">
+            <PopoverTrigger className="text-[10px] leading-none hover:opacity-70 md:text-sm">
               +{filteredEvents.length - displayCount} more
             </PopoverTrigger>
             <PopoverContent>
