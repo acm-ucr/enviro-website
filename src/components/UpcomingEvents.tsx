@@ -2,33 +2,18 @@
 import React from "react";
 import { useQuery } from "@tanstack/react-query";
 import Subheading from "@/components/Subheading";
-import Button from "@/components/Button";
 import Cards from "@/components/events/Cards";
 
 export type GoogleEventProps = {
-  start: {
-    dateTime?: string;
-    date?: string;
-  };
-  end: {
-    dateTime?: string;
-    date?: string;
-  };
+  start: { dateTime?: string; date?: string };
+  end: { dateTime?: string; date?: string };
   location?: string;
   description?: string;
   summary: string;
 };
 
-export interface EventCardProps {
-  date: string;
-  month: string;
-  time: string;
-  title: string;
-  location: string;
-  description: string;
-}
-
 const UpcomingEvent = () => {
+  // Fetch Google Calendar events
   const { data, isLoading, isError } = useQuery<{
     allEvents: GoogleEventProps[];
     futureEvents: GoogleEventProps[];
@@ -46,21 +31,27 @@ const UpcomingEvent = () => {
       const response = await fetch(
         `https://www.googleapis.com/calendar/v3/calendars/${
           process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL
-        }/events?key=${process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_API_KEY}&singleEvents=true&orderBy=startTime&timeMin=${tenWeeksAgo}&timeMax=${tenWeeksAhead}`,
+        }/events?key=${
+          process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_API_KEY
+        }&singleEvents=true&orderBy=startTime&timeMin=${tenWeeksAgo}&timeMax=${tenWeeksAhead}`,
       ).then((res) => res.json());
 
       const allEvents: GoogleEventProps[] = response.items || [];
 
-      const futureEvents = allEvents
-        .filter((item) => {
-          const startString = item.start?.dateTime || item.start?.date;
-          return startString && new Date(startString) >= now;
-        })
-        .slice(0, 3);
+      const futureEvents = allEvents.filter((item) => {
+        const startString = item.start?.dateTime || item.start?.date;
+        return startString && new Date(startString) >= now;
+      });
 
       return { allEvents, futureEvents };
     },
   });
+
+  const sourceEvents = data?.futureEvents || [];
+
+  // Cap at 2 events
+  const eventsToShow = sourceEvents.slice(0, 2);
+
   return (
     <div className="text-enviro-gray-100 flex w-full flex-col items-center justify-center gap-y-12">
       <Subheading
@@ -69,20 +60,7 @@ const UpcomingEvent = () => {
         text="text-3xl"
       />
 
-      <Cards
-        events={data?.futureEvents ?? []}
-        isLoading={isLoading}
-        isError={isError}
-      />
-
-      <div className="w-1/2 pb-10 sm:w-1/3 md:w-[30%] lg:w-3/12">
-        <Button
-          href=""
-          textSize="text-lg sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl"
-        >
-          See More
-        </Button>
-      </div>
+      <Cards events={eventsToShow} isLoading={isLoading} isError={isError} />
     </div>
   );
 };
