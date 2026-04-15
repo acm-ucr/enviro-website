@@ -50,7 +50,7 @@ const CalendarDay = ({ date, displayMonth, events }: DayProps) => {
     const update = () => {
       if (window.innerWidth < 640) {
         setVisibleEventCount(1);
-      } else if (window.innerWidth < 1024) {
+      } else if (window.innerWidth < 1280) {
         setVisibleEventCount(2);
       } else {
         setVisibleEventCount(3);
