@@ -1,8 +1,13 @@
+import Title from "@/components/contactus/Title";
+import OurSocials from "@/components/contactus/OurSocials";
+import HighlanderLink from "@/components/contactus/HighlanderLink";
 const Contact = () => {
   return (
-    <div className="flex h-screen w-screen items-center justify-center">
-      Contact Us
-    </div>
+    <>
+      <Title />
+      <OurSocials />
+      <HighlanderLink />
+    </>
   );
 };
 
