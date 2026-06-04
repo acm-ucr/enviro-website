@@ -12,7 +12,7 @@ const HighlanderLink = () => {
       <Image
         src={grid}
         alt="grid"
-        className="absolute inset-0 -z-10 h-full object-cover"
+        className="absolute inset-0 -z-10 h-full w-full object-cover"
       />
       <motion.div
         initial={{ x: -20 }}

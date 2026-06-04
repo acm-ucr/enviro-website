@@ -10,7 +10,7 @@ const Title = () => {
       <Image
         src={grid}
         alt="grid"
-        className="absolute -z-10 h-full object-cover"
+        className="absolute -z-10 h-full w-full object-fill"
       />
 
       <motion.div
