@@ -31,10 +31,10 @@ const PastEvents = () => {
                 className="border-enviro-green-400 relative top-2 h-80 w-full scale-[0.93] border object-cover object-center lg:h-120"
               />
               <div className="font-enviro-single-day pt-5 text-center text-3xl md:text-5xl">
-                Event Name
+                KRCB Clean Up
               </div>
               <div className="font-enviro-single-day text-center text-xl md:text-3xl">
-                Month Year
+                10/12/2025
               </div>
             </div>
           </div>
@@ -72,10 +72,10 @@ const PastEvents = () => {
                 className="border-enviro-green-400 relative top-2 h-80 scale-[0.93] border object-cover lg:h-120"
               />
               <div className="font-enviro-single-day pt-5 text-center text-3xl md:text-5xl">
-                Event Name
+                1st General Meeting
               </div>
               <div className="font-enviro-single-day text-center text-xl md:text-3xl">
-                Month Year
+                10/29/2025
               </div>
             </div>
           </div>

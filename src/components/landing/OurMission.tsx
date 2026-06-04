@@ -29,10 +29,9 @@ const OurMission = () => {
       <div className="z-10 col-start-1 row-start-1 flex flex-col items-center justify-around md:absolute md:mt-[5%] md:mb-[10%] md:flex-row">
         {/* Left side */}
         <motion.div
-          variants={FadeDown}
-          initial="initial"
-          whileInView="whileInView"
-          viewport={{ once: true }}
+          initial={{ scale: 0 }}
+          whileInView={{ scale: 1 }}
+          whileHover={{ scale: 1.05 }}
           className="relative w-full sm:mt-15 md:w-1/2"
         >
           <div className="bg-enviro-gray-100 mx-5 pb-10 shadow-lg">
